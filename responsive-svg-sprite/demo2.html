@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+	<meta charset="utf-8">
+	<title>背景百分比定位的示例</title>
+    <link rel="stylesheet" href="css/svg.css">
+</head>
+
+<body>
+
+    <div class="demo2">
+		<div class="percent"></div>
+        <div class="line"></div>
+    </div>
+
+	<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    autoAdjust();
+    function autoAdjust(){
+        var $line = $('.line'),
+            $demo2 = $('.demo2 .percent'),
+            percentX = 0,
+            add = true;
+
+        setInterval(function(){
+            if (add) {
+                percentX += 1;
+
+                if (percentX > 100) {
+                    percentX = 100;
+                    add = false;
+                }
+            } else {
+                percentX -= 1;
+
+                if (percentX < 0) {
+                    percentX = 0;
+                    add = true;
+                }
+            }
+
+            $line.css('background-position', percentX + '% 0%');
+            $demo2.css('background-position', percentX + '% 0%');
+        }, 100);
+    }
+  </script>
+</body>
+
+</html>

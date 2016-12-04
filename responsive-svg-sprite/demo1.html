@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+	<meta charset="utf-8">
+	<title>单张背景图的响应式</title>
+    <link rel="stylesheet" href="css/svg.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <ul class="list demo1">
+    	    <li>
+    	        <i class="icon svg1"></i>
+    	    </li>
+    	</ul>
+    </div>
+
+	<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    autoAdjust();
+    function autoAdjust(){
+        var $list = $('.list'),
+            width = $list.width(),
+            maxWidth = width,
+            minWidth = width * 0.8,
+            minus = true;
+
+        setInterval(function(){
+            if (minus) {
+                width -= 5;
+
+                if (width < minWidth) {
+                    width = minWidth;
+                    minus = false;
+                }
+            } else {
+                width += 5;
+
+                if (width > maxWidth) {
+                    width = maxWidth;
+                    minus = true;
+                }
+            }
+
+            $list.width(width);
+        }, 60);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <meta charset="utf-8">
+    <title>响应式雪碧图示例 - svg图标</title>
+    <link rel="stylesheet" href="css/svg.css">
+</head>
+
+<body>
+    <div class="wrap2">
+        <p class="txt">本方案兼容ie9+、chrome、firefox、safari</p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="wrap2 demo3 nogap">
+        <p class="txt">雪碧图之间没有间隔的情况</p>
+        <i class="icon svg1"></i>
+        <i class="icon svg2"></i>
+        <i class="icon svg3"></i>
+        <i class="icon svg4"></i>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="wrap2 demo3 hasgap">
+        <p class="txt">雪碧图之间上下左右各有1px的情况</p>
+        <i class="icon svg1"></i>
+        <i class="icon svg2"></i>
+        <i class="icon svg3"></i>
+        <i class="icon svg4"></i>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    autoAdjust();
+    function autoAdjust(){
+        var $wrap = $('.wrap2'),
+            width = $wrap.width(),
+            maxWidth = width,
+            minWidth = width * 0.5,
+            minus = true;
+
+        setInterval(function(){
+            if (minus) {
+                width -= 5;
+
+                if (width < minWidth) {
+                    width = minWidth;
+                    minus = false;
+                }
+            } else {
+                width += 5;
+
+                if (width > maxWidth) {
+                    width = maxWidth;
+                    minus = true;
+                }
+            }
+
+            $wrap.width(width);
+        }, 100);
+    }
+  </script>
+
+</body>
+
+</html>
