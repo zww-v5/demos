@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+        <title>带小数位的百分比、像素测试页面</title>
+        <style>
+            body {
+                padding: 20px;
+                color: #303030;
+                font-size: 14px;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+            h1 {
+                margin-top: 0;
+            }
+            .container,
+            .container2 {
+                background-color: #777;
+                float: left;
+                clear: both;
+                width: 1200px;
+                color: #fff;
+                text-align: right;
+                padding: 4px;
+            }
+            .container2 {
+                width: 5120px;
+            }
+            .box-item {
+                padding: 0;
+                display: block;
+                float: left;
+                clear: both;
+            }
+            .box-item + .box-item {
+                margin-top: 4px;
+            }
+            .box-item > div {
+                padding: 15px;
+                background: #62227D;
+            }
+            .label {
+                padding: 15px;
+                display: inline-block;
+            }
+            small {
+                font-size: 100%;
+            }
+            .box2-1 {
+                width: 620.4px;
+            }
+            .box2-2 {
+                width: 620.5px;
+            }
+            .box2-3 {
+                width: 620.6px;
+            }
+            .content {
+                padding: 15px;
+                background: #ddd;
+                display: inline-block
+            }
+            .content p {
+                margin: 0;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .container2 .box-item {
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>带小数位的百分比、像素测试页面</h1>
+
+        <!-- 例子1 start -->
+        <h2>例子1</h2>
+
+        <div style="width:100%;overflow:hidden;">
+            <div class="container">
+                <div class="box-item huge1" style="width:50.4234112897987342876343534543534635653654654645676756756756756756765%"><div>huge 1</div></div>
+                <div class="box-item huge2" style="width:50.5697612897987865876343534543534635653654654645676756756756756756765%"><div>huge 2</div></div>
+                <div class="label">Container</div>
+            </div>
+        </div>
+
+        <p class="huge1-css">huge 1 在CSS中设置成: <strong></strong></p>
+        <p class="huge2-css">huge 2 在CSS中设置成: <strong></strong></p>
+        <div class="content">
+            <p class="huge1-val">浏览器计算出的 huge 1 的百分比宽度是: <strong></strong></p>
+            <p class="huge2-val">浏览器计算出的 huge 2 的百分比宽度是: <strong></strong></p>
+            <p class="huge1-dp">计算后的小数位保留到: <strong></strong>位</p>
+        </div>
+        <!-- 例子1 end -->
+
+        <!-- 例子2 start -->
+        <h2>例子2</h2>
+
+        <div style="width:100%;overflow:hidden;">
+            <div class="container">
+                <div class="box-item box2-1"><div>Box 2-1</div></div>
+                <div class="box-item box2-2"><div>Box 2-2</div></div>
+                <div class="box-item box2-3"><div>Box 2-3</div></div>
+                <div class="label">Container</div>
+            </div>
+        </div>
+
+        <p>box 2-1 的宽度设置成: <strong>620.4px</strong><br/>box 2-2 的宽度设置成: <strong>620.5px</strong><br/>box 2-3 的宽度设置成: <strong>620.6px</strong></p>
+
+         <div class="content">
+            <p class="p2-1">浏览器计算出的 box 2-1 的宽度是: <strong></strong><span class="bold">px</span></br>
+            浏览器计算出的 box 2-2 的宽度是: <strong></strong><span class="bold">px</span><br/>
+            浏览器计算出的 box 2-3 的宽度是: <strong></strong><span class="bold">px</span></p>
+        </div>
+        <!-- 例子2 end -->
+
+        <!-- 例子3 start -->
+        <h2>例子3</h2>
+
+        <p style="margin-top:0">container 宽度: <strong class="cw3 input"></strong><span class="bold">px</span></p>
+
+        <div style="width:100%;overflow:hidden;">
+            <div class="container">
+                <div class="box-item box3"><div>Box 3</div></div>
+                <div class="label">Container</div>
+            </div>
+        </div>
+
+        <p class="pw3">box 3 的宽度设置为: <strong></strong></p>
+        <p class="p3-1">采用原始的百分比<strong>手工计算</strong> box 3 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <p class="p3-2">采用浏览器处理后的百分比<strong>手工计算</strong> box 3 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <div class="content">
+            <p class="p3-3">浏览器计算出的 box 3 的宽度是: <strong></strong><span class="bold">px</span></p>
+            <p class="p3-dp">计算后的小数位保留到: <strong></strong>位</p>
+        </div>
+        <!-- 例子3 end -->
+
+        <!-- 例子4 start -->
+        <h2>例子4</h2>
+
+        <p style="margin-top:0">container 宽度: <strong class="cw4 input"></strong><span class="bold">px</span></p>
+
+        <div style="width:100%;overflow:hidden;">
+            <div class="container">
+                <div class="box-item box4"><div>Box 4</div></div>
+                <div class="label">Container</div>
+            </div>
+        </div>
+
+        <p class="pw4">box 4 的宽度设置为: <strong></strong></p>
+        <p class="p4-1">采用原始的百分比<strong>手工计算</strong> box 4 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <p class="p4-2">采用浏览器处理后的百分比<strong>手工计算</strong> box 4 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <div class="content">
+            <p class="p4-3">浏览器计算出的 box 4 的宽度是: <strong></strong><span class="bold">px</span></p>
+            <p class="p4-dp">计算后的小数位保留到: <strong></strong>位</p>
+        </div>
+        <!-- 例子4 end -->
+
+        <!-- 例子5 start -->
+        <h2>例子5</h2>
+
+        <p style="margin-top:0">container 宽度: <strong class="cw5 input"></strong><span class="bold">px</span></p>
+
+        <div style="width:100%;overflow:hidden;">
+            <div class="container2">
+                <div class="box-item box5"><div>Box 5</div></div>
+                <div class="label">Container</div>
+            </div>
+        </div>
+
+        <p class="pw5">box 5 的宽度设置为: <strong></strong></p>
+        <p class="p5-1">采用原始的百分比<strong>手工计算</strong> box 5 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <p class="p5-2">采用浏览器处理后的百分比<strong>手工计算</strong> box 5 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <div class="content">
+            <p class="p5-3">浏览器计算出的 box 5 的宽度是: <strong></strong><span class="bold">px</span></p>
+            <p class="p5-dp">计算后的小数位保留到: <strong></strong>位</p>
+        </div>
+        <!-- 例子5 end -->
+
+        <!-- 例子6 start -->
+        <h2>例子6</h2>
+
+        <p style="margin-top:0">container 宽度: <strong class="cw6 input"></strong><span class="bold">px</span></p>
+
+        <div style="width:100%;overflow:hidden;">
+            <div class="container2">
+                <div class="box-item box6"><div>Box 6</div></div>
+                <div class="label">Container</div>
+            </div>
+        </div>
+
+        <p class="pw6">box 6 的宽度设置为: <strong></strong></p>
+        <p class="p6-1">采用原始的百分比<strong>手工计算</strong> box 6 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <p class="p6-2">采用浏览器处理后的百分比<strong>手工计算</strong> box 6 的宽度为:<br/>(<small></small> / 100) x <span></span></p>
+        <div class="content">
+            <p class="p6-3">浏览器计算出的 box 6 的宽度是: <strong></strong><span class="bold">px</span></p>
+            <p class="p6-dp">计算后的小数位保留到: <strong></strong>位</p>
+        </div>
+        <!-- 例子6 end -->
+
+
+
+        <script type="text/javascript" src="../lib/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                var perc1 = 50.423411289798734,
+                    perc2 = 50.569761289798786;
+
+                /* 例子1 start */
+                $('.huge1-css strong').text('50.4234112897987342876343534543534635653654654645676756756756756756765%');
+                $('.huge2-css strong').text('50.5697612897987865876343534543534635653654654645676756756756756756765%');
+
+                $('.huge1-val strong').text( $('.huge1')[0].style.width );
+                $('.huge2-val strong').text( $('.huge2')[0].style.width );
+
+                var av = $('.huge1')[0].style.width;
+                $('.huge1-dp strong').text( av.replace('%','').replace(/[0-9]+\./,'').length );
+                /* 例子1 end */
+
+                /* 例子2 start */
+                $('.p2-1').find('strong').eq(0).text( $('.box2-1')[0].getBoundingClientRect().width || $('.box2-1')[0].clientWidth );
+                $('.p2-1').find('strong').eq(1).text( $('.box2-2')[0].getBoundingClientRect().width || $('.box2-2')[0].clientWidth );
+                $('.p2-1').find('strong').eq(2).text( $('.box2-3')[0].getBoundingClientRect().width || $('.box2-3')[0].clientWidth );
+                /* 例子2 end */
+
+                /* 例子3 start */
+                $('.box3').width(perc1 + '%');
+                $('.cw3, .cw4').text( $('.container').width() );
+
+                $('.pw3 strong').text( perc1 + '%' );
+                $('.p3-1 small, .p3-2 small').text( $('.container').width() );
+                $('.p3-1 span').html( perc1 + ' = <strong>' + ((parseInt($('.container').width())/100) * perc1) + 'px</strong>' );
+                $('.p3-2 span').html( parseFloat($('.box3')[0].style.width) + ' = <strong>' + ((parseInt($('.container').width())/100) * parseFloat($('.box3')[0].style.width)) + 'px</strong>' );
+
+                $('.p3-3 strong').text( $('.box3')[0].getBoundingClientRect().width || $('.box3')[0].clientWidth );
+
+                var av = $('.p3-3 strong').text();
+                $('.p3-dp strong').text( av.replace('px','').replace(/[0-9]+\./,'').length );
+                /* 例子3 end */
+
+                /* 例子4 start */
+                $('.box4').width(perc2 + '%');
+
+                $('.pw4 strong').text( perc2 + '%' );
+                $('.p4-1 small, .p4-2 small').text( $('.container').width() );
+                $('.p4-1 span').html( perc2 + ' = <strong>' + ((parseInt($('.container').width())/100) * perc2) + 'px</strong>' );
+                $('.p4-2 span').html( parseFloat($('.box4')[0].style.width) + ' = <strong>' + ((parseInt($('.container').width())/100) * parseFloat($('.box4')[0].style.width)) + 'px</strong>' );
+
+                $('.p4-3 strong').text( $('.box4')[0].getBoundingClientRect().width || $('.box4')[0].clientWidth );
+
+                var av = $('.p4-3 strong').text();
+                $('.p4-dp strong').text( av.replace('px','').replace(/[0-9]+\./,'').length );
+                /* 例子4 end */
+
+                /* 例子5 start */
+                $('.box5').width(perc1 + '%');
+                $('.cw5, .cw6').text( $('.container2').width() );
+
+                $('.pw5 strong').text( perc1 + '%' );
+                $('.p5-1 small, .p5-2 small').text( $('.container2').width() );
+                $('.p5-1 span').html( perc1 + ' = <strong>' + ((parseInt($('.container2').width())/100) * perc1) + 'px</strong>' );
+                $('.p5-2 span').html( parseFloat($('.box5')[0].style.width) + ' = <strong>' + ((parseInt($('.container2').width())/100) * parseFloat($('.box5')[0].style.width)) + 'px</strong>' );
+
+                $('.p5-3 strong').text( $('.box5')[0].getBoundingClientRect().width || $('.box5')[0].clientWidth );
+
+                var av = $('.p5-3 strong').text();
+                $('.p5-dp strong').text( av.replace('px','').replace(/[0-9]+\./,'').length );
+                /* 例子5 end */
+
+                /* 例子6 start */
+                $('.box6').width(perc2 + '%');
+
+                $('.pw6 strong').text( perc2 + '%' );
+                $('.p6-1 small, .p6-2 small').text( $('.container2').width() );
+                $('.p6-1 span').html( perc2 + ' = <strong>' + ((parseInt($('.container2').width())/100) * perc2) + 'px</strong>' );
+                $('.p6-2 span').html( parseFloat($('.box6')[0].style.width) + ' = <strong>' + ((parseInt($('.container2').width())/100) * parseFloat($('.box6')[0].style.width)) + 'px</strong>' );
+
+                $('.p6-3 strong').text( $('.box6')[0].getBoundingClientRect().width || $('.box6')[0].clientWidth );
+
+                var av = $('.p6-3 strong').text();
+                $('.p6-dp strong').text( av.replace('px','').replace(/[0-9]+\./,'').length );
+                /* 例子6 end */
+            });
+        </script>
+    </body>
+</html>
