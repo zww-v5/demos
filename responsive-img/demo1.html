@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+	<meta charset="utf-8">
+	<title>响应式图片方案</title>
+    <link rel="stylesheet" href="css/svg.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <h2>img元素未设置宽度</h2>
+        <ul class="grids">
+            <li>
+                <h2>固定宽度的svg图片</h2>
+                <div class="demo">
+                    <picture>
+                        <source srcset="images/cvm.svg" type="image/svg+xml">
+                        <img src="images/cvm.png" alt="">
+                    </picture>
+                </div>
+            </li>
+            <li>
+                <h2>响应式的svg图片</h2>
+                <div class="demo">
+                    <picture>
+                        <source srcset="images/cvm-responsive.svg" type="image/svg+xml">
+                        <img src="images/cvm.png" alt="">
+                    </picture>
+                </div>
+            </li>
+        </ul>
+
+        <h2>img元素的宽度为100%</h2>
+        <ul class="grids">
+            <li>
+                <h2>固定宽度的svg图片</h2>
+                <div class="demo demo2">
+                    <picture>
+                        <source srcset="images/cvm.svg" type="image/svg+xml">
+                        <img src="images/cvm.png" alt="">
+                    </picture>
+                </div>
+            </li>
+            <li>
+                <h2>响应式的svg图片</h2>
+                <div class="demo demo2">
+                    <picture>
+                        <source srcset="images/cvm-responsive.svg" type="image/svg+xml">
+                        <img src="images/cvm.png" alt="">
+                    </picture>
+                </div>
+            </li>
+        </ul>
+
+        <p>支持的浏览器：chrome、safari、firefox、qq browser、ie8、ie9、ie10、</p>
+        <p>ie8、ie9、ie10使用的是png图片</p>
+    </div>
+
+
+</body>
+
+</html>
