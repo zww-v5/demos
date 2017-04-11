@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS架构</title>
+    </head>
+    <body>
+        <p>各种常见的CSS类名命名、组件样式（包括内部元素）写法、组件扩展写法、组件状态写法等的优缺点</p>
+
+        <!--== BEM方式 start ==-->
+        <!-- 以翻页模块命名为例 -->
+        <div class="qcc-pages">
+            <a href="" class="qcc-pages__item qcc-pages__item_prev qcc-pages__item_disabled">上一页</a>
+            <span class="qcc-pages__cur">1</span> <!-- 当前页 -->
+            <a href="" class="qcc-pages__item">2</a>
+            <a href="" class="qcc-pages__item">3</a>
+            <span class="qcc-pages__dot">...</span>
+            <a href="" class="qcc-pages__item">10</a>
+            <a href="" class="qcc-pages__item qcc-pages__item_next">下一页</a>
+        </div>
+
+        <style media="screen">
+
+            /* 翻页的css样式 */
+            .qcc-pages {
+
+            }
+            .qcc-pages__item {
+
+            }
+            .qcc-pages__item_prev {
+
+            }
+            .qcc-pages__item_next {
+
+            }
+            .qcc-pages_item_disabled {
+
+            }
+            .qcc-pages__cur {
+
+            }
+            .qcc-pages__dot {
+
+            }
+
+        </style>
+
+        <!-- 翻页的第二种风格 -->
+        <div class="qcc-pages qcc-pages_style2">
+            ...
+        </div>
+
+        <style media="screen">
+
+            /* 第二种风格的样式，可以采用嵌套写法 */
+            .qcc-pages_style2 {
+
+            }
+            .qcc-pages_style2 .qcc-pages__item {
+
+            }
+            .qcc-pages_style2 .qcc-pages__item_prev {
+
+            }
+
+        </style>
+        <!--== BEM方式 end ==-->
+
+        <!--== 第二版本示例 start ==-->
+        <!-- 以翻页模块命名为例 -->
+        <div class="qcc-pages">
+            <a href="" class="qcc-pages-item qcc-pages-item-prev qcc-pages-item-disabled">上一页</a>
+            <span class="qcc-pages-cur">1</span> <!-- 当前页 -->
+            <a href="" class="qcc-pages-item">2</a>
+            <a href="" class="qcc-pages-item">3</a>
+            <span class="qcc-pages-dot">...</span>
+            <a href="" class="qcc-pages-item">10</a>
+            <a href="" class="qcc-pages-item qcc-pages-item-next">下一页</a>
+        </div>
+
+        <style media="screen">
+            /* 翻页的css样式 */
+            .qcc-pages {
+
+            }
+            .qcc-pages-item {
+
+            }
+            .qcc-pages-item-prev {
+
+            }
+            .qcc-pages-item-next {
+
+            }
+            .qcc-pages-item-disabled {
+
+            }
+            .qcc-pages-cur {
+
+            }
+            .qcc-pages-dot {
+
+            }
+        </style>
+
+        <!-- 翻页的第二种风格 -->
+        <div class="qcc-pages qcc-pages-style2">
+            ...
+        </div>
+
+        <style media="screen">
+            /* 第二种风格的样式，可以采用嵌套写法 */
+            .qcc-pages-style2 {
+
+            }
+            .qcc-pages-style2 .qcc-pages-item {
+
+            }
+            .qcc-pages-style2 .qcc-pages-item-prev {
+
+            }
+        </style>
+
+        <!-- 按钮组件 -->
+        <button class="qcc-btn">按钮组件</button>
+
+        <!-- 包含按钮的翻页 -->
+        <div class="qcc-pages">
+            <button class="qcc-btn qcc-pages-btn">按钮组件</button>
+        </div>
+
+        <style media="screen">
+            .qcc-btn {
+
+            }
+
+            .qcc-pages {
+
+            }
+            .qcc-pages-btn {
+
+            }
+        </style>
+        <!--== 第二版本示例 end ==-->
+
+        <!--== 业务模块的命名 start ==-->
+        <!-- 文档中心的样式类名统一为 doc-xxx 的方式进行命名 -->
+
+        <!-- 文档中心新的模块 start -->
+        <div class="doc-menu">
+            <ul class="doc-menu-list">
+                <li class="doc-menu-list-item">...</li>
+            </ul>
+        </div>
+
+        <style media="screen">
+            .doc-menu {
+
+            }
+            .doc-menu-list {
+
+            }
+            .doc-menu-list-item {
+
+            }
+        </style>
+        <!-- 文档中心新的模块 end -->
+
+        <!-- 文档中心扩展官网公用组件 start -->
+        <div class="qcc-pages doc-pages">
+            <a href="" class="qcc-pages-item qcc-pages-item-prev qcc-pages-item-disabled">上一页</a>
+            <span class="qcc-pages-cur">1</span> <!-- 当前页 -->
+            ...
+        </div>
+
+        <style media="screen">
+            .doc-pages {
+
+            }
+            .doc-pages .qcc-pages-item {
+
+            }
+            .doc-pages .qcc-pages-item-prev {
+
+            }
+        </style>
+        <!-- 文档中心扩展官网公用组件 end -->
+        <!--== 业务模块的命名 end ==-->
+
+        <!--== 页面样式的处理 start ==-->
+        <!-- 文档中心下有一个总览页面，其命名前缀为 pandect-xxx -->
+
+        <!-- 总览页自身的样式 start -->
+        <div class="pandect-features">
+            <div class="pandect-features-hd">
+                <h2>标题</h2>
+            </div>
+            <div class="pandect-features-bd">
+
+            </div>
+        </div>
+        <!-- 总览页自身的样式 end -->
+
+        <!-- 总览页调整菜单样式 start -->
+        <div class="doc-menu pandect-menu">
+            <h2>标题</h2>
+            <ul class="doc-menu-list">
+                <li class="doc-menu-list-item">...</li>
+            </ul>
+        </div>
+
+        <style>
+            .pandect-menu {
+
+            }
+            .pandect-menu h2 {
+
+            }
+            .pandect-menu .doc-menu-list-item {
+
+            }
+        </style>
+        <!-- 总览页调整菜单样式 end -->
+        <!--== 页面样式的处理 end ==-->
+
+    </body>
+</html>
