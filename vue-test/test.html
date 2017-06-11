@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>vue</title>
+        <script src="js/vue.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            Vue.component('my-component', {
+                template: '<p class="foo bar">hi</p>'
+            })
+        </script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError}">变化class</div>
+
+            <my-component class="baz boo"></my-component>
+
+            <div v-if="Math.random() > 0.5">
+                sorry
+            </div>
+            <div v-else>
+                not sorry
+            </div>
+
+            <template v-if="loginType === 'username'">
+                <label for="">Username</label>
+                <input type="text" placeholder="Enter your username">
+            </template>
+            <template v-else>
+                <label>Email</label>
+                <input placeholder="Enter your email address">
+            </template>
+            <button v-on:click="toggleType">toggle login type</button>
+
+            <input type="checkbox" v-model="checked" value="a">
+            <input type="checkbox" v-model="checked" value="b">
+            <span>{{ checked }}</span>
+
+            <input type="checkbox" v-model="toggle" v-bind:true-value="a" v-bind:false-value="b">
+            <span>{{ toggle }}</span>
+
+            <input type="text" v-model.lazy="msg">
+            <span>{{ msg }}</span>
+
+            <input v-model.number="age" type="number">
+            <span>{{ typeof age }}</span>
+        </div>
+
+        <div id="parent">
+            <input type="text" v-model="parentValue">
+            <child v-bind:message="parentValue"></child>
+        </div>
+
+        <div id="parent-2">
+            <div>{{ total }}</div>
+            <button-counter v-on:up="calTotal"></button-counter>
+            <button-counter v-on:up="calTotal"></button-counter>
+        </div>
+
+        <script type="text/javascript">
+            var vm = new Vue({
+                el: '.static',
+                data: {
+                    isActive: true,
+                    hasError: false
+                }
+            });
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    loginType: 'username',
+                    checked: [],
+                    toggle: 'b',
+                    a: 'value-a',
+                    b: 'value-b',
+                    msg: '',
+                    age: ''
+                },
+                methods: {
+                    toggleType: function(){
+                        // if (this.loginType === 'username') {
+                        //     this.loginType = 'email';
+                        // } else {
+                        //     this.loginType = 'username';
+                        // }
+                        this.loginType = this.loginType === 'username' ? 'email' : 'username';
+                    }
+                }
+            });
+
+            Vue.component('child', {
+                props: ['message'],
+                template: '<div>{{ message }}</div>'
+            });
+            var parent = new Vue({
+                el: '#parent',
+                data: {
+                    parentValue: 'try to change the value'
+                }
+            });
+
+            Vue.component('button-counter', {
+                template: '<button v-on:click="calCounter">{{ counter }}</button>',
+                data: function(){
+                    return {
+                        counter: 0
+                    };
+                },
+                methods: {
+                    calCounter: function(){
+                        this.counter++;
+                        this.$emit('up');
+                    }
+                }
+            });
+
+            var parent2 = new Vue({
+                el: '#parent-2',
+                data: {
+                    total: 0
+                },
+                methods: {
+                    calTotal: function(){
+                        this.total++;
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

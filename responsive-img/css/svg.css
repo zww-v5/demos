@@ -1,0 +1,29 @@
+.wrap {
+    margin: 0 auto;
+    width: 70%;
+}
+h2 {
+    margin: 0;
+    font-size: 14px;
+}
+.demo {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+.demo2 img {
+    width: 100%;
+}
+.grids:before,
+.grids:after {
+    content: '';
+    display: table;
+}
+.grids:after {
+    clear: both;
+}
+.grids > li {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 5px;
+    width: 50%;
+}

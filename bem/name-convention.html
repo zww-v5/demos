@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>命名规范示例</title>
+    </head>
+    <body>
+
+        <!-- 代码结构 -->
+        <div class="qcc-grids qcc-grids_slot">
+            <div class="qcc-grids__item qcc-grids__6">
+
+            </div>
+        </div>
+
+        <!-- 以翻页模块命名为例 -->
+        <div class="qcc-pages">
+            <a href="" class="qcc-pages__item qcc-pages__item_prev qcc-pages__item_disabled">上一页</a>
+            <span class="qcc-pages__cur">1</span> <!-- 当前页 -->
+            <a href="" class="qcc-pages__item">2</a>
+            <a href="" class="qcc-pages__item">3</a>
+            <span class="qcc-pages__dot">...</span>
+            <a href="" class="qcc-pages__item">10</a>
+            <a href="" class="qcc-pages__item qcc-pages__item_next">下一页</a>
+        </div>
+
+        <style media="screen">
+
+            /* 翻页的css样式 */
+            .qcc-pages {
+
+            }
+            .qcc-pages__item {
+
+            }
+            .qcc-pages__item_prev {
+
+            }
+            .qcc-pages__item_next {
+
+            }
+            .qcc-pages_item_disabled {
+
+            }
+            .qcc-pages__cur {
+
+            }
+            .qcc-pages__dot {
+
+            }
+
+        </style>
+
+        <!-- 翻页的第二种风格 -->
+        <div class="qcc-pages qcc-pages_style2">
+            ...
+        </div>
+
+        <style media="screen">
+
+            /* 第二种风格的样式，可以采用嵌套写法 */
+            .qcc-pages_style2 {
+
+            }
+            .qcc-pages_style2 .qcc-pages__item {
+
+            }
+            .qcc-pages_style2 .qcc-pages__item_prev {
+
+            }
+            ...
+
+        </style>
+
+    </body>
+</html>
