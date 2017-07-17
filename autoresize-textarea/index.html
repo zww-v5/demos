@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>实现自适应高度的textarea</title>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <style media="screen">
+        body {
+            background: #728EB2;
+            color: #FFF;
+        }
+        /*( 'box-sizing' will not work with this code )*/
+    </style>
+</head>
+
+<body>
+    <h1>方法一：用js实时调整textarea的高度</h1>
+    <style media="screen">
+        .demo1 {
+            /* box-sizing: padding-box; */
+            overflow: hidden;
+            /* demo only: */
+            padding: 10px;
+            width: 250px;
+            font-size: 14px;
+            margin: 50px auto;
+            display: block;
+            border-radius: 10px;
+            border: 6px solid #556677;
+        }
+    </style>
+    <textarea rows='1' placeholder='Auto-Expanding Textarea' class="demo1"></textarea>
+
+    <script>
+        function textareaAutoResize(selector){
+            var textarea = document.querySelector(selector),
+                extraHeight = 0,
+                regExp = new RegExp('border-box', 'gi'); //
+
+            if (regExp.test(textarea.style.cssText)) {
+                extraHeight = textarea.style.borderWidth;
+            }
+
+            textarea.addEventListener('keydown', autosize);
+            textarea.addEventListener('cut', autosize);
+            textarea.addEventListener('paste', autosize);
+
+            function autosize() {
+                var el = this;
+                setTimeout(function() {
+                    el.style.cssText = 'height:auto; padding:0';
+                    // for box-sizing other than "content-box" use:
+                    // el.style.cssText = '-moz-box-sizing:content-box';
+                    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+                }, 0);
+            }
+        }
+        textareaAutoResize('.demo1');
+    </script>
+
+    <h1>方法二：用div来模拟textarea，适合于富文本</h1>
+    <style media="screen">
+        .demo2 {
+            position: relative;
+            margin: 50px auto;
+            width: 300px;
+        }
+        .demo2 .textarea {
+            padding: 10px;
+            min-height: 18px;
+            font-size: 14px;
+            line-height: 18px;
+            display: block;
+            border-radius: 10px;
+            border: 6px solid #556677;
+            background-color: #fff;
+            color: #444;
+        }
+        .demo2 .placeholder {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            right: 16px;
+            color: #888;
+            font-size: 14px;
+            pointer-events: none;
+        }
+        .demo2 .placeholder.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+    <div class="demo2">
+        <div class="textarea" contenteditable="true"></div>
+        <label class="placeholder">文本提示</label>
+    </div>
+    <script type="text/javascript">
+        (function(){
+            var textarea = document.querySelector('.demo2 .textarea'),
+                placeholder = document.querySelector('.demo2 .placeholder');
+
+            triggerPlaceholder();
+
+            textarea.addEventListener('keyup', function(){
+                console.log('keydown');
+                triggerPlaceholder();
+            });
+
+            function triggerPlaceholder(){
+                if (textarea.innerHTML) {
+                    addClass(placeholder, 'hidden');
+                } else {
+                    console.log('remove');
+                    removeClass(placeholder, 'hidden');
+                }
+            }
+
+            function addClass(el,className){
+                if (el.classList) {
+                    el.classList.add(className);
+                } else {
+                    el.className += ' ' + className;
+                }
+            }
+
+            function removeClass(el, className){
+                if (el.classList) {
+                    el.classList.remove(className);
+                } else {
+                    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>

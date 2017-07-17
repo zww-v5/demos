@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 auto;
+    padding: 50px 20px;
+    max-width: 1000px;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+ul,li {
+    padding: 0;
+    list-style: none;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+i {
+    font-style: normal;
+}
+
+.lab-panel {
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* 按钮 start */
+.lab-btn {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 35px;
+    border: 1px solid #0d76ff;
+    border-radius: 2px;
+    background-color: #0d76ff;
+    font-size: 14px;
+    line-height: 33px;
+    color: #fff;
+    text-align: center;
+}
+.lab-btn:hover {
+    background-color: #095ecb;
+    border-color: #095ecb;
+}
+
+/* 类型 start */
+.lab-btn.weak {
+    background-color: #fff;
+    color: #0d76ff;
+}
+.lab-btn.weak:hover {
+    background-color: #095ecb;
+    border-color: #095ecb;
+    color: #fff;
+}
+
+.lab-btn.pay {
+    background-color: #ff7200;
+    border-color: #ff7200;
+}
+.lab-btn.pay:hover {
+    background-color: #f06c00;
+    border-color: #f06c00;
+}
+
+.lab-btn.danger {
+    background-color: #e1504a;
+    border-color: #e1504a;
+}
+.lab-btn.danger:hover {
+    background-color: #e1504a;
+    border-color: #e1504a;
+}
+
+.lab-btn.white {
+    background-color: #fff;
+    border-color: #fff;
+    color: #202020;
+}
+.lab-btn.white:hover {
+    background-color: #116ddd;
+    border-color: #116ddd;
+    color: #fff;
+}
+/* 类型 end */
+
+/* 尺寸 start */
+.lab-btn.large {
+    width: 200px;
+    height: 45px;
+    line-height: 43px;
+}
+.lab-btn.small {
+    font-size: 12px;
+    padding: 0 10px;
+    height: 28px;
+    line-height: 26px;
+}
+
+.lab-btn.block {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lab-btn.block + .lab-btn {
+    margin-top: 10px;
+}
+/* 尺寸 end */
+
+.lab-btn .lab-ani-loading {
+  display: none;
+}
+
+.lab-btn.loading {
+    cursor: default;
+}
+
+.lab-btn.loading .text {
+  display: none;
+}
+
+.lab-btn.loading .lab-ani-loading {
+  display: block;
+}
+
+/* 按钮 end */
+
+/* 步骤 start */
+.lab-steps {
+    margin: 20px 0;
+    font-size: 0;
+    text-align: center;
+}
+.lab-step {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 23px;
+    width: 190px;
+}
+.lab-step-text {
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: nowrap;
+    color: #bbb;
+}
+.lab-step-order {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    margin-left: -8px;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #ddd;
+    background-clip: padding-box;
+    transition: all .6s;
+}
+.lab-step-order:before {
+    content: '';
+}
+.lab-step:before,
+.lab-step:after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+}
+.lab-step:after {
+    width: 0;
+    background-color: #0d76ff;
+}
+.lab-step:first-child:before,
+.lab-step:first-child:after {
+    display: none;
+}
+
+/* 当前、完成状态 start */
+.lab-step.m-actived .lab-step-text,
+.lab-step.m-finished .lab-step-text {
+    color: #0d76ff;
+}
+.lab-step.m-actived .lab-step-order,
+.lab-step.m-finished .lab-step-order {
+    background-color: #fff;
+    border: 2px solid #0d76ff;
+}
+.lab-step.m-finished .lab-step-order:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    margin: -4px 0 0 -2px;
+    width: 4px;
+    height: 8px;
+    border-right: 2px solid #0d76ff;
+    border-bottom: 2px solid #0d76ff;
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+.lab-step.m-actived:after,
+.lab-step.m-finished:after {
+    width: 100%;
+}
+/* 当前、完成状态 end */
+
+/* 动画 start */
+.lab-step.ani-starting:after {
+    animation: step-starting .6s;
+    width: 100%;
+}
+@keyframes step-starting {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.lab-step.ani-finishing .lab-step-order:before {
+    animation: step-finishing .3s ease-in;
+}
+@keyframes step-finishing {
+    0% {
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+    }
+    100% {
+        border-right-color: #0d76ff;
+        border-bottom-color: #0d76ff;
+    }
+}
+/* 动画 end */
+/* 步骤 end */
