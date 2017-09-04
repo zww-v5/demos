@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {{#if title}}
+                {{title}}
+            {{else}}
+                base page title
+            {{/if}}
+        </title>
+        {{#> layout-head}}
+        {{/layout-head}}
+    </head>
+    <body>
+        {{#> layout-body}}
+        {{/layout-body}}
+
+        {{#> layout-jquery}}
+        {{/layout-jquery}}
+    </body>
+</html>

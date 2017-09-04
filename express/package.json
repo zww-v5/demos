@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "express test",
   "main": "app.js",
-  "dependencies": {
-    "body-parser": "^1.17.2"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "test": "mocha"
