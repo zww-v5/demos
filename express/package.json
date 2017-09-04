@@ -1,0 +1,15 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "express test",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "zww",
+  "license": "ISC"
+}
