@@ -1,9 +1,0 @@
-:root{
-	/* 字体设置 */
-	--font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC-Light", "Hiragino Sans GB", Arial, sans-serif;
-	--code-font-family: Consolas, Menlo, Courier, monospace;
-
-	--font-size: 14px;
-	--line-height: 1.5;
-	--text-color: #333;
-}
