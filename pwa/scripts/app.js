@@ -356,4 +356,37 @@
           console.log('Service Worker Registered');
       });
   }
+
+  var deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', function(e) {
+      console.log('beforeinstallprompt Event fired');
+      e.preventDefault();
+
+      deferredPrompt = e;
+
+      return false;
+    });
+
+    document.getElementById('butRefresh').addEventListener('click', function() {
+      if(deferredPrompt !== undefined) {
+        deferredPrompt.prompt();
+
+        deferredPrompt.userChoice.then(function(choiceResult) {
+
+          console.log(choiceResult.outcome);
+
+          if(choiceResult.outcome == 'dismissed') {
+          // 拒绝添加
+            console.log('User cancelled home screen install');
+          }
+          else {
+            console.log('User added to home screen');
+          }
+
+          // 不在提醒
+          deferredPrompt = null;
+        });
+      }
+    });
 })();
