@@ -1,3 +1,5 @@
+"use strict";
+
 let gulp = require('gulp');
 let rename = require('gulp-rename');
 let vars = require('gulp-vars');
