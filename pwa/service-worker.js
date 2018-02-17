@@ -1,4 +1,4 @@
-var cacheName = 'weatherPWA-step-6-1';
+var cacheName = 'weatherPWA-step-6-2';
 var filesToCache = ['/demos/pwa/', '/demos/pwa/index.html', '/demos/pwa/scripts/app.js', '/demos/pwa/styles/inline.css', '/demos/pwa/images/clear.png', '/demos/pwa/images/cloudy-scattered-showers.png', '/demos/pwa/images/cloudy.png', '/demos/pwa/images/fog.png', '/demos/pwa/images/ic_add_white_24px.svg', '/demos/pwa/images/ic_refresh_white_24px.svg', '/demos/pwa/images/partly-cloudy.png', '/demos/pwa/images/rain.png', '/demos/pwa/images/scattered-showers.png', '/demos/pwa/images/sleet.png', '/demos/pwa/images/snow.png', '/demos/pwa/images/thunderstorm.png', '/demos/pwa/images/wind.png'];
 var dataCacheName = 'weatherData-v1';
 
