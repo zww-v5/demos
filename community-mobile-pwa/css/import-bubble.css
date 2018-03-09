@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+/**
+ * 工具提示（tooltips）&气泡(bubble)，在官网样式的基础上进行修改
+ */
+
+.c-bubble {
+    color: #444;
+    z-index: 9001;
+}
+.c-bubble-inner {
+    border: none;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+}
+
+.c-bubble-top .c-bubble-inner:before {
+    border-bottom-color: #ddd;
+}
+
+.c-bubble-right .c-bubble-inner:before {
+    border-left-color: #ddd;
+}
+
+.c-bubble-bottom .c-bubble-inner:before {
+    border-top-color: #ddd;
+}
+
+.c-bubble-left .c-bubble-inner:before {
+    border-right-color: #ddd;
+}
+
+/* 图标 + 气泡 start */
+.c-bubble-trigger {
+    font-size: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.c-bubble-trigger-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.c-bubble-trigger-text {
+    font-size: 12px;
+    cursor: pointer;
+}
+.c-bubble-trigger-btn {
+    position: relative;
+    display: block;
+    padding: 0 30px 0 10px;
+    height: 21px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #444;
+}
+.c-bubble-trigger-btn:after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -2px;
+    width: 9px;
+    height: 5px;
+    background-size: 100% auto;
+    background-image: url('img/slice/icon-arrow-bottom.svg?fill=#00a4ff');
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+.c-bubble-trigger.show-bubble .c-bubble-trigger-btn {
+    color: #00a4ff;
+    text-decoration: none;
+}
+.c-bubble-trigger.show-bubble .c-bubble-trigger-btn:after {
+    background-image: url('img/slice/icon-arrow-bottom.svg?fill=#00a4ff');
+    -webkit-transform: rotate3d(0,0,1,-180deg);
+            transform: rotate3d(0,0,1,-180deg);
+}
+
+.c-bubble-trigger .c-bubble {
+    display: none;
+    /*visibility: hidden;*/
+    width: 300px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.c-bubble-trigger.show-bubble .c-bubble {
+    z-index: 9999;
+	display: block;
+    /*visibility: visible;*/
+    /*-webkit-transition-delay: 100ms;
+    transition-delay: 100ms;*/
+    opacity: 1;
+}
+
+.c-bubble-trigger .c-bubble .c-bubble-inner {
+    display: inline-block;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: left;
+    vertical-align: middle;
+    pointer-events: auto;
+}
+
+.c-bubble-trigger .c-bubble-top,
+.c-bubble-trigger .c-bubble-bottom {
+    left: 50%;
+    margin-left: -150px;
+}
+
+.c-bubble-trigger .c-bubble-top {
+    top: 100%;
+    margin-top: 8px;
+}
+
+.c-bubble-trigger .c-bubble-bottom {
+    bottom: 100%;
+    margin-bottom: 8px;
+}
+
+.c-bubble-trigger .c-bubble-left,
+.c-bubble-trigger .c-bubble-right {
+    top: 50%;
+    height: 300px;
+    margin-top: -150px;
+}
+
+.c-bubble-trigger .c-bubble-left:before,
+.c-bubble-trigger .c-bubble-right:before {
+    font-size: 0;
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+}
+
+.c-bubble-trigger .c-bubble-left {
+    text-align: left;
+    left: 100%;
+    margin-left: 8px;
+}
+
+.c-bubble-trigger .c-bubble-right {
+    text-align: right;
+    right: 100%;
+    margin-right: 8px;
+}
+
+.c-bubble-trigger.c-triangle-align-start .c-bubble.c-bubble-top,
+.c-bubble-trigger.c-triangle-align-start .c-bubble.c-bubble-bottom {
+    text-align: left;
+    margin-left: -32px;
+}
+
+.c-triangle-align-start .c-bubble-top .c-bubble-inner,
+.c-triangle-align-start .c-bubble-bottom .c-bubble-inner {
+    left: 32px;
+}
+
+.c-triangle-align-start .c-bubble-left,
+.c-triangle-align-start .c-bubble-right {
+    margin-top: -18px;
+}
+
+.c-triangle-align-start .c-bubble-left .c-bubble-inner,
+.c-triangle-align-start .c-bubble-right .c-bubble-inner {
+    top: 18px;
+    vertical-align: top;
+}
+
+.c-triangle-align-end .c-bubble-top,
+.c-triangle-align-end .c-bubble-bottom {
+    text-align: right;
+    left: auto;
+    right: 0;
+    margin-right: -24px;
+}
+
+.c-triangle-align-end .c-bubble-top .c-bubble-inner,
+.c-triangle-align-end .c-bubble-bottom .c-bubble-inner {
+    left: auto;
+    right: 10px;
+}
+
+.c-triangle-align-end .c-bubble-top .c-bubble-inner:after,
+.c-triangle-align-end .c-bubble-bottom .c-bubble-inner:after {
+    margin-right: 1px;
+}
+
+.c-triangle-align-end .c-bubble-left,
+.c-triangle-align-end .c-bubble-right {
+    top: auto;
+    bottom: -10px;
+    margin-top: 0;
+}
+
+.c-triangle-align-end .c-bubble-left .c-bubble-inner,
+.c-triangle-align-end .c-bubble-right .c-bubble-inner {
+    vertical-align: bottom;
+    top: auto;
+    bottom: 10px;
+}
+
+.c-triangle-align-end .c-bubble-left .c-bubble-inner:after,
+.c-triangle-align-end .c-bubble-right .c-bubble-inner:after {
+    margin-bottom: 1px;
+}
+
+/*.c-bubble-trigger-icon.what {
+    background-image: url('img/slice/icon-what.png');
+    cursor: pointer;
+}
+
+.c-bubble-trigger-icon.info {
+    background-image: url('img/slice/icon-info.png');
+    cursor: pointer;
+}*/
+/* 图标 + 气泡 end */
+
+/* 二次确认 start */
+.com-bubble-confirm {
+    min-width: 170px;
+    max-width: 300px;
+}
+.com-bubble-confirm .c-bubble-inner {
+    padding: 18px 20px;
+}
+.com-bubble-confirm .confirm-title {
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+}
+.com-bubble-confirm .confirm-btns {
+    margin-top: 14px;
+}
+.com-bubble-confirm .confirm-btn {
+    min-width: 60px;
+    border: none;
+    background-color: transparent;
+    color: #00a4ff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.com-bubble-confirm .confirm-btn:active {
+    color: #0092ee;
+}
+.com-bubble-confirm .confirm-btn.weak {
+    color: #000;
+}
+.com-bubble-confirm .confirm-btn.weak:active {
+    color: #00a4ff;
+    text-decoration: none;
+}
+/* 二次确认 end */
+
+/* 二次确认 - 按钮在右侧 start */
+.com-bubble-confirm.align-right .confirm-btns {
+	text-align: right;
+}
+/* 二次确认 - 按钮在右侧 end */
+
+/* 菜单 start */
+.com-dropdown-menu .menu-link {
+    display: block;
+    padding: 0 17px;
+    height: 34px;
+    font-size: 16px;
+    line-height: 34px;
+    color: #444;
+    white-space: nowrap;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+.com-dropdown-menu .menu-link.actived,
+.com-dropdown-menu .menu-link:active {
+    color: #00a4ff;
+	background-color: #f2f2f2;
+    text-decoration: none;
+}
+/* 菜单 end */
+
+/* 下拉菜单 + 气泡 start */
+.c-bubble .com-dropdown-menu {
+    margin: -8px -10px;
+    padding: 5px 0;
+}
+/* 下拉菜单 + 气泡 end */
