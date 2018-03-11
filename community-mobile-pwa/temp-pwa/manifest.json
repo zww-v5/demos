@@ -22,8 +22,8 @@
         "sizes": "256x256",
         "type": "image/png"
     }],
-    "start_url": "index.html",
+    "start_url": "index.html?from=homescreen",
     "display": "standalone",
-    "background_color": "#00a4ff",
+    "background_color": "#fff",
     "theme_color": "#00a4ff"
 }

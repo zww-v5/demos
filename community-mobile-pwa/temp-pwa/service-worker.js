@@ -19,7 +19,7 @@ var dataCacheName = 'Tencent-cloud-data-1.0';
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
     e.waitUntil(caches.open(cacheName).then(function(cache) {
-        console.log('[ServiceWorker] Caching app shell');
+        console.log('[ServiceWorker] 缓存文件');
         return cache.addAll(filesToCache);
     }));
 });
@@ -28,7 +28,7 @@ self.addEventListener('activate', function(e) {
     console.log('[ServiceWorker] Activate');
     e.waitUntil(caches.keys().then(function(keyList) {
         return Promise.all(keyList.map(function(key) {
-            console.log('[ServiceWorker] Removing old cache', key);
+            console.log('[ServiceWorker] 删除缓存文件', key);
             if (key !== cacheName && key !== dataCacheName) {
                 return caches.delete(key);
             }
