@@ -1,6 +1,6 @@
-var cacheName = 'Tencent-cloud-1.0';
-var filesToCache = [];
-var dataCacheName = 'Tencent-cloud-data-1.0';
+// var cacheName = 'Tencent-cloud-1.0';
+// var filesToCache = [];
+// var dataCacheName = 'Tencent-cloud-data-1.0';
 
 // self.addEventListener('install', function(e) {
 //     console.log('[ServiceWorker] Install');
