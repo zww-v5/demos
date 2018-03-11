@@ -1,5 +1,5 @@
 var cacheName = 'Tencent-cloud-1.0';
-var filesToCache = ['index.html','../css/community-m-dist.css','../css/sprite/community-m-201803072039.svg','../css/sprite/community-m-201803072039.png'];
+var filesToCache = ['index.html','app.js','../css/community-m-dist.css','../css/sprite/community-m-201803072039.svg','../css/sprite/community-m-201803072039.png'];
 var dataCacheName = 'Tencent-cloud-data-1.0';
 
 self.addEventListener('install', function(e) {
