@@ -1,18 +1,19 @@
 var cacheName = 'Tencent-cloud-1.0';
 var filesToCache = [
-    'index.html',
-    'app.js',
-    'css/global.css',
-    'css/community-m-dist.css',
-    'css/sprite/community-m-201803072039.svg',
-    'css/sprite/community-m-201803072039.png',
-    'css/img/ywfjvz7645.jpg',
-    'css/img/more-icon.png',
-    'css/img/index/adbg2@2x.jpg',
-    'css/img/featured-mask.png',
-    'css/img/index/adbg3@2x.jpg',
-    'css/img/tags-icon.png',
-    'css/img/avatar.jpg'
+    '/demos/community-mobile-pwa/temp-pwa/',
+    '/demos/community-mobile-pwa/temp-pwa/index.html',
+    '/demos/community-mobile-pwa/temp-pwa/app.js',
+    '/demos/community-mobile-pwa/temp-pwa/css/global.css',
+    '/demos/community-mobile-pwa/temp-pwa/css/community-m-dist.css',
+    '/demos/community-mobile-pwa/temp-pwa/css/sprite/community-m-201803072039.svg',
+    '/demos/community-mobile-pwa/temp-pwa/css/sprite/community-m-201803072039.png',
+    '/demos/community-mobile-pwa/temp-pwa/css/img/ywfjvz7645.jpg',
+    '/demos/community-mobile-pwa/temp-pwa/css/img/more-icon.png',
+    '/demos/community-mobile-pwa/temp-pwa/css/img/index/adbg2@2x.jpg',
+    '/demos/community-mobile-pwa/temp-pwa/css/img/featured-mask.png',
+    '/demos/community-mobile-pwa/temp-pwa/css/img/index/adbg3@2x.jpg',
+    '/demos/community-mobile-pwa/temp-pwa/css/img/tags-icon.png',
+    '/demos/community-mobile-pwa/temp-pwa/css/img/avatar.jpg'
 ];
 var dataCacheName = 'Tencent-cloud-data-1.0';
 
