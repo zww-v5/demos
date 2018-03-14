@@ -2,17 +2,17 @@ var cacheName = 'Tencent-cloud-1.0';
 var filesToCache = [
     'index.html',
     'app.js',
-    '../css/global.css',
-    '../css/community-m-dist.css',
-    '../css/sprite/community-m-201803072039.svg',
-    '../css/sprite/community-m-201803072039.png',
-    '../css/img/ywfjvz7645.jpg',
-    '../css/img/more-icon.png',
-    '../css/img/index/adbg2@2x.jpg',
-    '../css/img/featured-mask.png',
-    '../css/img/index/adbg3@2x.jpg',
-    '../css/img/tags-icon.png',
-    '../css/img/avatar.jpg'
+    'css/global.css',
+    'css/community-m-dist.css',
+    'css/sprite/community-m-201803072039.svg',
+    'css/sprite/community-m-201803072039.png',
+    'css/img/ywfjvz7645.jpg',
+    'css/img/more-icon.png',
+    'css/img/index/adbg2@2x.jpg',
+    'css/img/featured-mask.png',
+    'css/img/index/adbg3@2x.jpg',
+    'css/img/tags-icon.png',
+    'css/img/avatar.jpg'
 ];
 var dataCacheName = 'Tencent-cloud-data-1.0';
 
