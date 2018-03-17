@@ -11,19 +11,19 @@
     <meta name="format-detection" content="telephone=no" />
 
     <!-- 公用样式 start -->
-    <link href="http://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/global.css?t=2016080812&amp;max_age=31536000" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
     <!-- 公用样式 end -->
 
-    <link rel="stylesheet" href="../../community-mobile/css/community-m.css">
-    <link rel="stylesheet" href="http://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/community/css/markdown.css">
-    <link rel="stylesheet" href="../css/q-and-a.css" />
+    <link rel="stylesheet" href="css/community-m-dist.css">
+    <link rel="stylesheet" href="//imgcache.qq.com/open_proj/proj_qcloud_v2/community/portal/css/markdown-201803121258.css?max_age=31536000">
+    <link rel="stylesheet" href="https://imgcache.qq.com/open_proj/proj_qcloud_v2/community/q-and-a-mobile/css/q-and-a-201803121258.css?max_age=31536000">
 
 </head>
 <body>
 
 	<div class="qa-page-container">
 
-		
+
 
 		<!-- 头部 start -->
 		<header class="com-header com-special-header">
@@ -133,7 +133,7 @@
 						    		<!-- 人物信息 start -->
 						    	    <div class="com-media com-answer-panel-author">
 						    	        <div class="com-media-object">
-						    	            <span class="com-media-img" style="background-image:url('../css/img/avatar.svg');"></span>
+						    	            <span class="com-media-img" style="background-image:url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/community/q-and-a-mobile/css/img/avatar.svg');"></span>
 						    	        </div>
 						    	        <div class="com-media-body">
 						    	            <span class="author-info name">杉本博司</span>
@@ -211,7 +211,7 @@
 						    		<!-- 人物信息 start -->
 						    	    <div class="com-media com-answer-panel-author">
 						    	        <div class="com-media-object">
-						    	            <span class="com-media-img" style="background-image:url('../css/img/avatar.svg');"></span>
+						    	            <span class="com-media-img" style="background-image:url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/community/q-and-a-mobile/css/img/avatar.svg');"></span>
 						    	        </div>
 						    	        <div class="com-media-body">
 						    	            <span class="author-info name">杉本博司</span>
@@ -290,7 +290,7 @@
 						    		<!-- 人物信息 start -->
 						    	    <div class="com-media com-answer-panel-author">
 						    	        <div class="com-media-object">
-						    	            <span class="com-media-img" style="background-image:url('../css/img/avatar.svg');"></span>
+						    	            <span class="com-media-img" style="background-image:url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/community/q-and-a-mobile/css/img/avatar.svg');"></span>
 						    	        </div>
 						    	        <div class="com-media-body">
 						    	            <span class="author-info name">杉本博司</span>
@@ -368,7 +368,7 @@
 						    		<!-- 人物信息 start -->
 						    	    <div class="com-media com-answer-panel-author">
 						    	        <div class="com-media-object">
-						    	            <span class="com-media-img" style="background-image:url('../css/img/avatar.svg');"></span>
+						    	            <span class="com-media-img" style="background-image:url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/community/q-and-a-mobile/css/img/avatar.svg');"></span>
 						    	        </div>
 						    	        <div class="com-media-body">
 						    	            <span class="author-info name">杉本博司</span>
@@ -446,7 +446,7 @@
 						    		<!-- 人物信息 start -->
 						    	    <div class="com-media com-answer-panel-author">
 						    	        <div class="com-media-object">
-						    	            <span class="com-media-img" style="background-image:url('../css/img/avatar.svg');"></span>
+						    	            <span class="com-media-img" style="background-image:url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/community/q-and-a-mobile/css/img/avatar.svg');"></span>
 						    	        </div>
 						    	        <div class="com-media-body">
 						    	            <span class="author-info name">杉本博司</span>
@@ -493,25 +493,37 @@
 		</div>
 
 
-		<footer class="com-m-footer">
+        <footer class="com-m-footer">
 			<nav class="nav-inner">
 				<a href="index.html" class="nav-item">
 					<i class="icon home"></i>
 					<h3 class="title">首页</h3>
 				</a>
-				<a href="search.html" class="nav-item">
+				<a href="column-index.html" class="nav-item">
 					<i class="icon column"></i>
 					<h3 class="title">专栏</h3>
 				</a>
-				<a href="http://imgcache.qq.comopen_proj/proj_qcloud_v2/gateway/q-and-a-mobile/html/index.html" class="nav-item actived">
+				<a href="ask-index.html" class="nav-item actived">
 					<i class="icon ask"></i>
 					<h3 class="title">问答</h3>
 				</a>
-				<a href="" class="nav-item">
-					<i class="icon lab"></i>
-					<h3 class="title">实验室</h3>
-				</a>
-				<a href="" class="nav-item">
+                <div class="nav-dropdown-wrap">
+                    <a href="" class="nav-item">
+    					<i class="icon more"></i>
+    					<h3 class="title">更多</h3>
+    				</a>
+
+                    <div class="c-bubble c-bubble-bottom" style="display:none;">
+                        <div class="c-bubble-inner">
+                            <ul class="com-m-footer-menu">
+                                <li><a href="" class="menu-link">线下沙龙</a></li>
+                                <li><a href="" class="menu-link actived">开发者手册</a></li>
+                                <li><a href="" class="menu-link">开发者实验室</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<a href="user-center.html" class="nav-item">
 					<i class="icon me"></i>
 					<h3 class="title">我的</h3>
 				</a>
@@ -519,11 +531,6 @@
 		</footer>
 
 	</div>
-
-
-	<script src="http://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/community/common-header-footer/js/community-dev.js" charset="utf-8"></script>
-    <script src="http://imgcache.qq.com/open_proj/proj_qcloud_v2/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="../js/common.js" charset="utf-8"></script>
 </body>
 
 </html>

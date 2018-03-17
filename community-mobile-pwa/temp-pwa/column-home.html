@@ -11,10 +11,10 @@
     <meta name="format-detection" content="telephone=no" />
 
     <!-- 公用样式 start -->
-    <link href="http://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/global.css" rel="stylesheet" />
+    <link href="https://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/global.css" rel="stylesheet" />
     <!-- 公用样式 end -->
 
-    <link rel="stylesheet" href="./css/community-m.css" />
+    <link rel="stylesheet" href="css/community-m-dist.css" />
 
 </head>
 <body class="">
@@ -132,25 +132,37 @@
 		</div>
 
 
-		<footer class="com-m-footer">
+        <footer class="com-m-footer">
 			<nav class="nav-inner">
-				<a href="index.html" class="nav-item">
+				<a href="index.html" class="nav-item actived">
 					<i class="icon home"></i>
 					<h3 class="title">首页</h3>
 				</a>
-				<a href="search.html" class="nav-item">
+				<a href="column-index.html" class="nav-item">
 					<i class="icon column"></i>
 					<h3 class="title">专栏</h3>
 				</a>
-				<a href="" class="nav-item">
+				<a href="ask-index.html" class="nav-item">
 					<i class="icon ask"></i>
 					<h3 class="title">问答</h3>
 				</a>
-				<a href="" class="nav-item">
-					<i class="icon lab"></i>
-					<h3 class="title">实验室</h3>
-				</a>
-				<a href="" class="nav-item actived">
+                <div class="nav-dropdown-wrap">
+                    <a href="" class="nav-item">
+    					<i class="icon more"></i>
+    					<h3 class="title">更多</h3>
+    				</a>
+
+                    <div class="c-bubble c-bubble-bottom" style="display:none;">
+                        <div class="c-bubble-inner">
+                            <ul class="com-m-footer-menu">
+                                <li><a href="" class="menu-link">线下沙龙</a></li>
+                                <li><a href="" class="menu-link actived">开发者手册</a></li>
+                                <li><a href="" class="menu-link">开发者实验室</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<a href="user-center.html" class="nav-item">
 					<i class="icon me"></i>
 					<h3 class="title">我的</h3>
 				</a>

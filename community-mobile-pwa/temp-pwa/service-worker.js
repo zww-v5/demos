@@ -1,4 +1,4 @@
-var cacheName = 'Tencent-cloud-1.0';
+var cacheName = 'Tencent-cloud-1.1';
 var filesToCache = [
     '/demos/community-mobile-pwa/temp-pwa/',
     '/demos/community-mobile-pwa/temp-pwa/index.html',
@@ -15,7 +15,7 @@ var filesToCache = [
     '/demos/community-mobile-pwa/temp-pwa/css/img/tags-icon.png',
     '/demos/community-mobile-pwa/temp-pwa/css/img/avatar.jpg'
 ];
-var dataCacheName = 'Tencent-cloud-data-1.0';
+var dataCacheName = 'Tencent-cloud-data-1.1';
 
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
