@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>pre不能滚动</title>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <meta name="format-detection" content="telephone=no" />
+    <style media="screen">
+    /* 移动端页面基础框架 start */
+    .com-mobile-layout {
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    /* 移动端页面基础框架 end */
+    .d-pre {
+        margin-top: 0;
+        font: 14px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+        padding: 16px;
+        overflow: scroll;
+        line-height: 1.45;
+        background-color: #f7f7f7;
+        border-radius: 3px;
+        word-wrap: normal;
+        -webkit-overflow-scrolling:touch;
+    }
+    </style>
+</head>
+<body>
+    <div class="com-mobile-layout">
+		<pre class="d-pre" id="pre">wget https://repo.percona.com/apt/percona‐release_0.1‐4.$(lsb_release ‐sc)_all.deb //获取perconna安装包
+sudo dpkg ‐i percona‐release_0.1‐4.$(lsb_release ‐sc)_all.deb
+sudo apt‐get update //升级Ubuntu软件包
+sudo apt‐get install percona‐toolkit
+</pre>
+        <p>当pre套在一个div里，并且这个div设置了overflow:auto；当pre在未滚动查看的情况下，不在可视范围内时，把pre滚动到可视范围，pre不能滚动查看代码。</p>
+        <p>如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，如果某译员被发现抄袭其他用户的文章，</p>
+        <pre class="d-pre" id="pre">wget https://repo.percona.com/apt/percona‐release_0.1‐4.$(lsb_release ‐sc)_all.deb //获取perconna安装包
+sudo dpkg ‐i percona‐release_0.1‐4.$(lsb_release ‐sc)_all.deb
+sudo apt‐get update //升级Ubuntu软件包
+sudo apt‐get install percona‐toolkit
+</pre>
+		<div class="d-pre2">
+			<pre>wget https://repo.percona.com/apt/percona‐release_0.1‐4.$(lsb_release ‐sc)_all.deb //获取perconna安装包
+sudo dpkg ‐i percona‐release_0.1‐4.$(lsb_release ‐sc)_all.deb
+sudo apt‐get update //升级Ubuntu软件包
+sudo apt‐get install percona‐toolkit
+</pre>
+		</div>
+        <script src="http://imgcache.qq.com/open/qcloud/js/version/201408/jquery.201408191328.js"></script>
+        <!-- <script>
+            $('#pre').on('click', function(){
+                $(this).hide().show(0);
+            });
+        </script> -->
+    </div>
+</body>
+
+</html>

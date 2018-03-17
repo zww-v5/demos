@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <title>flex box</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+
+    <!-- 公用样式 start -->
+	<link href="http://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/global.css" rel="stylesheet" />
+	<!-- 公用样式 end -->
+    <style media="screen">
+        .demo-box {
+            margin: 30px auto;
+            max-width: 830px;
+        }
+        .demo-dl {
+            margin-bottom: 10px;
+        }
+        .demo-dl dt {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="demo-box">
+        <h3 class="demo-title">flex的各个属性（旧版属性都要带上前缀）</h3>
+        <h4>父元素上的属性</h4>
+        <dl class="demo-dl">
+            <dt>display</dt>
+            <dd>flex | inline-flex</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)display</dt>
+            <dd>box | inline-box</dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>flex-direction</dt>
+            <dd>row | row-reverse | column | column-reverse</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)box-orient</dt>
+            <dd>horizontal | vertical</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)box-direction</dt>
+            <dd>normal | reverse</dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>flex-wrap</dt>
+            <dd>nowrap | wrap | wrap-reverse</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)box-lines</dt>
+            <dd>single | multiple</dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>flex-flow</dt>
+            <dd>&lt;flex-direction> || &lt;flex-wrap></dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>justify-content</dt>
+            <dd>flex-start | flex-end | center | space-between | space-around</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)box-pack</dt>
+            <dd>start | center | end | justify</dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>align-items</dt>
+            <dd>flex-start | flex-end | center | baseline | stretch</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)box-align</dt>
+            <dd>start | center | end | baseline | stretch</dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>align-content（应用在多行的flex container中）</dt>
+            <dd>flex-start | flex-end | center | space-between | space-around | stretch</dd>
+        </dl>
+
+        <h4>子元素上的属性</h4>
+        <dl class="demo-dl">
+            <dt>order</dt>
+            <dd>&lt;integer></dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)box-ordinal-group</dt>
+            <dd>&lt;integer></dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>flex</dt>
+            <dd>none | [ <‘flex-grow’> <‘flex-shrink’>? || <‘flex-basis’> ]</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)box-flex</dt>
+            <dd>&lt;integer></dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>flex-grow</dt>
+            <dd><number></dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>flex-shrink</dt>
+            <dd><number></dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>flex-basis</dt>
+            <dd>content | <‘width’></dd>
+        </dl>
+
+        <dl class="demo-dl">
+            <dt>align-self</dt>
+            <dd>auto | flex-start | flex-end | center | baseline | stretch</dd>
+        </dl>
+        <dl class="demo-dl">
+            <dt>(旧)flex-item-align</dt>
+            <dd>auto | start | center | end | baseline | stretch</dd>
+        </dl>
+    </div>
+    <!-- header end -->
+
+    <!-- header start -->
+    <div class="demo-body">
+        <h3 class="demo-title">水平居中对齐</h3>
+        <div class="flex-box">
+
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!-- header start -->
+
+    <!-- header end -->
+
+</body>
+
+</html>
