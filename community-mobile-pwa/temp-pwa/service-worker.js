@@ -1,4 +1,4 @@
-var cacheName = 'Tencent-cloud-1.4';
+var cacheName = 'Tencent-cloud-1.5';
 var filesToCache = [
     '/demos/community-mobile-pwa/temp-pwa/',
     '/demos/community-mobile-pwa/temp-pwa/index.html',
