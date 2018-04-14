@@ -3,7 +3,7 @@
 
     //注册service worker
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('../pwa/service-worker.js').then(function() {
+        navigator.serviceWorker.register('pwa/service-worker.js').then(function() {
             console.log('[ServiceWorker] Registered');
         });
     }
