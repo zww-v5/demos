@@ -1,19 +1,19 @@
 var cacheName = 'Tencent-cloud-1.5';
 var filesToCache = [
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/index.html',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/app.js',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/global.css',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/community-m-dist.css',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/sprite/community-m-201803072039.svg',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/sprite/community-m-201803072039.png',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/ywfjvz7645.jpg',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/more-icon.png',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/index/adbg2@2x.jpg',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/featured-mask.png',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/index/adbg3@2x.jpg',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/tags-icon.png',
-    '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/avatar.jpg'
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/index.html',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/app.js',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/global.css',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/community-m-dist.css',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/sprite/community-m-201803072039.svg',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/sprite/community-m-201803072039.png',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/ywfjvz7645.jpg',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/more-icon.png',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/index/adbg2@2x.jpg',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/featured-mask.png',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/index/adbg3@2x.jpg',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/tags-icon.png',
+    // '/demos/community-mobile-pwa/pwa-sw-diff-origin/css/img/avatar.jpg'
 ];
 var dataCacheName = 'Tencent-cloud-data-1.1';
 
