@@ -1,0 +1,16 @@
+{
+    "name": "腾讯云+社区",
+    "short_name": "云+社区",
+
+    "icons": [{
+        "src": "../css/icons/512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+
+    "start_url": "https://uiv5.com/demos/pwa/pwa-sw-other-website/index.html?from=pwa",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#00a4ff",
+    "scope": "https://uiv5.com/demos/"
+}
