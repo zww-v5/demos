@@ -3,7 +3,7 @@
     "short_name": "云+社区",
 
     "icons": [{
-        "src": "../css/icons/512.png",
+        "src": "https://uiv5.com/demos/pwa/pwa-sw-other-website/css/icons/512.png",
         "sizes": "512x512",
         "type": "image/png"
     }],
