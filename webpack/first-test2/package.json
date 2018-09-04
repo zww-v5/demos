@@ -1,0 +1,24 @@
+{
+  "name": "first-test2",
+  "version": "1.0.0",
+  "description": "webpack 中文官网示例练习",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "csv-loader": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.0",
+    "xml-loader": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "zww",
+  "license": "ISC"
+}
