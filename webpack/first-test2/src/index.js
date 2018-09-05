@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import PrintMe from './print.js';
 import printMe from './print.js';
 
 function component() {
@@ -17,3 +16,10 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+if (module.hot) {
+  module.hot.accept('./print.js', function(){
+    console.log('Accepting the updated printMe module!');
+    printMe(); 
+  });
+}
