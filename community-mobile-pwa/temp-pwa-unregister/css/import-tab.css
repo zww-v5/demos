@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/* 选项卡 start */
+.com-tab-hd {
+    margin-bottom: 10px;
+    height: 50px;
+    background-color: #fff;
+}
+.com-tab-hd-inner {
+    position: relative;
+    padding: 0 30px;
+    height: 50px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+}
+.com-tab-hd-inner:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.com-tab-ctrl {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+}
+.com-tab-ctrl li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+.com-tab-ctrl li:first-child {
+    margin-left: 0;
+}
+.com-tab-ctrl a {
+    position: relative;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 48px;
+    color: #000;
+    text-align: center;
+    height: 50px;
+}
+.com-tab-ctrl a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    border-bottom: 4px solid transparent;
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.com-tab-ctrl .actived a {
+    color: #00a4ff;
+}
+.com-tab-ctrl .actived a:after {
+    border-bottom-color: #00a4ff;
+}
+.com-tab-ctrl .num {
+    margin-left: 3px;
+}
+/* 选项卡 end */
+
+/* 选项卡 - 置顶效果 start */
+.com-tab-hd.fixed .com-tab-hd-inner {
+    position: fixed;
+    top: 56px;
+    z-index: 900;
+    width: 100%;
+    /*-webkit-box-shadow: rgba(0,0,0,.22) 0 5px 10px -5px;
+            box-shadow: rgba(0,0,0,.22) 0 5px 10px -5px;*/
+}
+/* 选项卡 - 置顶效果 end */
+
+/* 选项卡 - 自适应 start */
+.com-tab-hd.auto-adjust {
+    margin-bottom: 0;
+}
+.com-tab-hd.auto-adjust .com-tab-hd-inner {
+    padding: 0;
+    overflow: hidden;
+}
+.com-tab-hd.auto-adjust .com-tab-ctrl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.com-tab-hd.auto-adjust .com-tab-ctrl > li {
+    display: block;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0;
+}
+/* 选项卡 - 自适应 end */
+
+/* 子选项卡 start */
+.com-tab-hd.subhd {
+    margin-top: -10px;
+}
+.com-tab-hd.subhd .com-tab-hd-inner {
+    padding: 0 5px;
+}
+.com-tab-hd.subhd .com-tab-ctrl {
+    text-align: center;
+}
+.com-tab-hd.subhd .com-tab-ctrl li {
+    margin: 0 15px;
+}
+.com-tab-hd.subhd .com-tab-ctrl a {
+    padding: 0 10px;
+    line-height: 50px;
+    border: none;
+}
+.com-tab-hd.subhd .com-tab-ctrl .actived a {
+    color: #00a4ff;
+    border: none;
+}
+/* 子选项卡 end */
+
+/* 选项卡 - 置顶效果 start */
+.com-tab-hd.subhd.fixed .com-tab-hd-inner {
+    top: 101px;
+}
+/* 选项卡 - 置顶效果 end */
+
+/*==小屏下的特殊处理==*/
+@media screen and (max-width:320px) {
+    .com-tab-ctrl li {
+        margin-left: 30px;
+    }
+    .com-tab-ctrl li:first-child {
+        margin-left: 0;
+    }
+
+    .com-tab-hd.subhd .com-tab-ctrl li {
+        margin: 0 15px;
+    }
+}
+
+/* 选项卡置顶，内容高度自适应 start */
+.com-tab.fixed-hd {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	height: 100%;
+}
+.com-tab.fixed-hd > .com-tab-item {
+	padding-bottom: 10px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+/* 选项卡置顶，内容高度自适应 end */

@@ -1,0 +1,27 @@
+<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #666;
+      }
+
+      .cls-2 {
+        opacity: 0.1;
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>emblem-column-gray</title>
+  <circle class="cls-1" cx="8" cy="8" r="7.5"/>
+  <path class="cls-1" d="M8,1A7,7,0,1,1,1,8,7,7,0,0,1,8,1M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/>
+  <image class="cls-2" width="16" height="15" transform="translate(0.533 1.5) scale(0.933)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAACXBIWXMAAAvXAAAL1wElddLwAAABJ0lEQVQ4T6XTsU4cQQwG4M8ICYncNbkGJAhX0ZA6VPAaUEBPx7PQ5ZFSpeB0FFSIvEG0lw6ZYr3HcuyBIixZnvH8/ucfyxOZ6bO28REgIsYRMY2I8TrMuyRVeIIrnKwj2lxNRER0SxzgUkt0gMeIuENCVi9ekUTECFN8wT/s1H63FwPbWETEQ2Y2S5JSMMU1jvAH9+ieMMYpDrGPOW4iYr76nFERHOM7fmALj/iKC0y0Sjv8m8Y2VbAowAS/8bPipPKLwjUgM5eulXyGWzxhhnPsVZxV/rZw48wcVHJX3lRuhG8VhzF9JStqZvhb8dfKfqkiM9/OiZe+NF4ave4c6yc2e/5hfkgJ7S3zWncTTFs811MBMfSLe5PbNbNvDR4yc0k0SPK/9gxyKXJfRxnP7wAAAABJRU5ErkJggg=="/>
+  <circle class="cls-3" cx="8" cy="3.74" r="1.25"/>
+  <circle class="cls-3" cx="12" cy="6" r="1.24"/>
+  <circle class="cls-3" cx="4" cy="6" r="1.24"/>
+  <path class="cls-3" d="M8,5.24l.69,1.37a1.779,1.779,0,0,0,2.22.89L10.24,10H5.76L5.09,7.5a1.779,1.779,0,0,0,2.22-.89L8,5.24M8,3.49a.38.38,0,0,0-.35.22L6.42,6.17a.819.819,0,0,1-.72.44.792.792,0,0,1-.46-.15l-.92-.64a.39.39,0,0,0-.61.43L4.9,10.63a.5.5,0,0,0,.48.37h5.24a.5.5,0,0,0,.48-.37l1.19-4.38a.39.39,0,0,0-.61-.43l-.92.64a.792.792,0,0,1-.46.15.819.819,0,0,1-.72-.44L8.35,3.71A.38.38,0,0,0,8,3.49Z"/>
+  <path class="cls-3" d="M10.5,12h-5a.5.5,0,0,0,0,1h5a.5.5,0,0,0,0-1Z"/>
+</svg>

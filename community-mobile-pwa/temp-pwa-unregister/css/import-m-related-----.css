@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.article-related-list {
+
+}
+.article-related-list li {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0 0 1px;
+  border-color: #ebebeb;
+  padding: 20px 0;
+  font-size: 15px;
+}
+.article-related-list li p,.article-related-list li p a {
+  color: #666;
+  word-wrap: break-word;
+}
+.article-related-list li h3 {
+  padding-top: 10px;
+}
+.article-related-list li h3,.article-related-list li h3 a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.38;
+  word-wrap: break-word;
+}

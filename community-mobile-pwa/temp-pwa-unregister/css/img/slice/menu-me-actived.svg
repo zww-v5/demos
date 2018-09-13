@@ -1,0 +1,12 @@
+<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00a4ff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>icon</title>
+  <path class="cls-1" d="M7.9,45H4V38h.06c.58-5,9.72-9,20.94-9s20.37,4,20.94,9H46v7H7.9ZM25,27A11,11,0,1,1,36,16,11,11,0,0,1,25,27Z"/>
+</svg>

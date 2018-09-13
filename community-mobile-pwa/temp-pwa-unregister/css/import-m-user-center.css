@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+/* 数据列表 start */
+.com-datas {
+	font-size: 0;
+}
+.com-data {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	color: #666;
+}
+.com-data .data-num {
+	margin-left: 5px;
+	color: #333;
+}
+.com-user-intro .com-data {
+	color: #fff;
+	font-size: 14px;
+}
+.com-user-intro .com-data .data-num {
+	color: #fff;
+}
+.com-data:before {
+	content: '';
+	position: relative;
+	top: -1px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+	width: 2px;
+	height: 2px;
+	background-color: #666;
+	border-radius: 50%;
+}
+.com-user-intro .com-data:before {
+	background-color: #fff;
+}
+.com-data:first-child:before {
+	display: none;
+}
+/* 数据列表 end */
+
+/* 数据列表 - 放在内容区中 start */
+.com-datas.in-para {
+	display: inline;
+	vertical-align: inherit;
+}
+.com-datas.in-para .com-data {
+	display: inline;
+	vertical-align: inherit;
+	font-size: 14px;
+	color: inherit;
+}
+.com-datas.in-para .com-data:before {
+	margin: 0 5px;
+}
+/* 数据列表 - 放在内容区中 end */
+
+/* 标签列表 start */
+.com-tags {
+	margin-right: -10px;
+	margin-bottom: -10px;
+	font-size: 0;
+}
+.com-tag {
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 0 10px;
+	height: 24px;
+	font-size: 12px;
+	line-height: 24px;
+	position: relative;
+	color: #000;
+	border-radius: 15px;
+	background-color: #fff;
+	border: 1px solid #ebebeb;
+}
+.com-tag .tag-delete {
+	/* position: absolute;
+	right: -5px;
+	top: -4px; */
+	font-size: 0;
+	width: 12px; height: 12px;
+	display: inline-block;
+	/* background-image: url(./img/slice/icon-clear-tag.svg); */
+	background-image: url(./img/slice/icon-close-tag.svg);
+	vertical-align: middle;
+	line-height: normal;
+	margin-top: -2px;
+	margin-left: 8px;
+}
+.com-tag-input {
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.com-tag-input .com-input {
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 24px;
+	line-height: 24px;
+}
+/* 标签列表 end */
+
+/* 用户简介 start */
+.com-user-intro {
+	padding: 15px;
+	text-align: center;
+	background-color: #23283c;
+	background-image: url(./img/banner.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.com-user-intro .com-user-avatar {
+	margin-bottom: 15px;
+}
+.com-user-intro .user-name {
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 22px;
+	white-space: initial;
+  display: block;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.com-user-intro .user-desc {
+	font-size: 14px;
+	color: #fff;
+	opacity: 0.5;
+	display: inline-block;
+  white-space: initial;
+  text-align: center;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+	-webkit-line-clamp: 2;
+	word-break: break-all;
+  -webkit-box-orient: vertical;
+}
+.com-user-intro .com-datas {
+	margin-top: 15px;
+}
+/* 用户简介 end */
+
+/* 用户信息表单 start */
+.com-user-intro-cells .com-label {
+	width: 70px;
+}
+.com-user-intro-cells .com-label [class^=com-icon-],
+.com-user-intro-cells .com-label [class*=com-icon-] {
+	position: relative;
+	top: -1px;
+	margin-right: 5px;
+}
+.com-cell-verify .com-icon-verify {
+	position: relative;
+	top: -1px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/* 用户信息表单 end */
+
+/* 运营卡片 - 如何获得成长值 start */
+.com-adpanels {
+	margin: 20px 15px;
+}
+.com-adpanel {
+	display: block;
+	margin-bottom: 10px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #000;
+}
+.com-adpanels li:nth-of-type(odd) .com-adpanel {
+	background-image: url(./img/group-2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left center;
+}
+.com-adpanels li:nth-of-type(even) .com-adpanel {
+	background-image: url(./img/group-1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right center;
+}
+/* 运营卡片 - 如何获得成长值 end */
+
+/* 无数据 start */
+.com-none {
+	padding: 50px 15px;
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666;
+}
+/* 无数据 end */
+
+/* 用户协议 start */
+/* 用户协议 end */
+
+/* 个人主页 客态时的关注按钮 */
+.com-user-ft-extra {
+	position: absolute;
+	left: 0; right: 0; bottom: 0;
+	height: 46px;
+	display: flex;
+	word-wrap: break-word;
+    white-space: nowrap;
+}
+.com-user-ft-extra .com-link-follow-btn {
+	width: auto;
+	height: 46px;
+	font-size: 16px;
+	flex: 1;
+	box-sizing: border-box;
+	display: inline-block;
+	border-radius: 0;
+	background-color: #00a4ff;
+	color: #fff;
+	border-width: 1px 0;
+	border-color: #00a4ff;
+	border-style: solid;
+}
+.com-user-ft-extra .com-link-followed-btn {
+	background-color: #fff;
+	color: #333;
+	border-width: 1px 0;
+	border-color: #ebebeb;
+	border-style: solid;
+}
+
+
+.com-link-follow-btn .c-loading .c-loading-inner>div {
+	background-color: #fff;
+}
+.com-link-followed-btn .c-loading .c-loading-inner>div {
+	background-color: #888;
+}
