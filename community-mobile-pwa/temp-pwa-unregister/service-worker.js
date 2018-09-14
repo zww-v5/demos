@@ -26,6 +26,14 @@ self.addEventListener('install', function(e) {
 });
 
 self.addEventListener('activate', function(e) {
+    //注销掉 service worker
+    self.registration.unregister().then(function(){
+        return self.clients.matchAll();
+    }).then(function(clients){
+        clients.forEach(client => client.navigate(client.url));
+    });
+
+    //删除缓存
     console.log('[ServiceWorker] Activate');
     e.waitUntil(caches.keys().then(function(keyList) {
         return Promise.all(keyList.map(function(key) {
