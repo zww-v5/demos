@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.com-top-menu {
+  position: absolute;
+  left: 0;
+  top: 56px;
+  right: 0;
+  z-index: 6;
+  height: 46px;
+  line-height: 46px;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.com-top-menu::-webkit-scrollbar {display:none}
+.com-top-menu-list {
+  word-wrap: break-word;
+  white-space: nowrap;
+  font-size: 0;
+  height: 46px;
+  -webkit-text-size-adjust:none;
+}
+.com-top-menu a {
+  padding: 0 5px;
+  box-sizing: border-box;
+  color: #333;
+  height: 46px;
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+}
+.com-top-menu a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+.com-top-menu a.current:after{
+  height: 2px;
+  background-color: #00a4ff;
+}
+.com-top-menu a span {
+  display: inline-block;
+  padding: 0 5px;
+  height: 46px;
+  box-sizing: border-box;
+}
+.com-top-menu a.current span {
+  color: #00a4ff;
+}
+
+/* 自适应不置顶 start */
+.com-top-menu.auto-adjust {
+	position: static;
+	overflow: visible;
+}
+.com-top-menu.auto-adjust .com-top-menu-list {
+	display: flex;
+}
+.com-top-menu.auto-adjust a {
+	position: relative;
+	flex: 1;
+	margin: 0;
+	text-align: center;
+}
+.com-top-menu.auto-adjust a:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -10px;
+	width: 1px;
+	height: 20px;
+	border-left: 1px solid #ebebeb;
+	transform: scaleX(0.5);
+}
+.com-top-menu.auto-adjust a:first-child:before {
+	display: none;
+}
+.com-top-menu.auto-adjust a span {
+	display: block;
+}
+.com-top-menu.auto-adjust::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+/* 自适应不置顶 end */
+
+/* 置底 start */
+.com-top-menu.bottom {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+  border-width: 1px 0 0;
+  background-color: #00a4ff;
+}
+.com-top-menu.bottom a {
+  font-size: 16px;
+  color: #fff;
+}
+
+.com-top-menu.bottom-actived {
+  background-color: #fff;
+}
+.com-top-menu.bottom-actived a {
+  color: #333
+}
+/* 置底 end */
