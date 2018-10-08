@@ -281,19 +281,11 @@
     /**
      * siblings
      * @param {DOM/String} DOM 元素或选择器字符串
-     * @param {String} 选择器字符串
      */
-    funcs.siblings = function(el, selector){
-        var children;
+    funcs.siblings = function(el){
         el = funcs.getFirstElement(el);
 
-        if (selector) {
-            children = el.parentNode.querySelectorAll(selector);
-        } else {
-            children = el.parentNode.children;
-        }
-
-        return Array.prototype.filter.call(children, function(child){
+        return Array.prototype.filter.call(el.parentNode.children, function(child){
             return child !== el;
         });
     }
@@ -334,7 +326,7 @@
      * triggerCustom
      * @param {DOM/String} DOM 元素或选择器字符串
      * @param {String} 自定义事件名称
-     * @param {Object} 执行事件时，传递过去的数据，这个数据将作为 event.detail 的内容
+     * @param {Object} 执行事件时，传递过去的数据
      */
     funcs.triggerCustom = function(el, customType, detail){
         el = funcs.getFirstElement(el);
@@ -459,7 +451,7 @@
 
     /**
      * parseHTML
-     * @param {String} 用于解析成 HTML 的字符串
+     * @param {String} 参数一
      */
     funcs.parseHTML = function(htmlString){
         if ( typeof htmlString !== "string" ) {

@@ -1,12 +1,1021 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>基础脚本</title>
+    <!-- 公用样式 start -->
+    <link rel="stylesheet" href="http://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/base.css" />
+    <!-- 公用样式 end -->
+    <link rel="stylesheet" href="../_doc/css/module.css">
+
+    <!-- 代码高亮 start -->
+    <link rel="stylesheet" href="../_doc/prism/prism.css">
+    <!-- 代码高亮 end -->
 </head>
 <body>
-    
+<div class="component-guide-wrap">
+    <aside class="component-guide-nav">
+        <div class="nav-title">基础脚本</div>
+        <ul class="nav-content">
+            <li><a href="">组件名</a></li>
+        </ul>
+    </aside>
+    <main class="component-guide-content">
+        <!-- 说明 start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">说明</h2>
+            </div>
+            <div class="content-mod-bd">
+                基础脚本 <code>base.js</code> 是整个脚本库的基础，其他的脚本都是基于这个脚本来编写。
+                <br>
+                基础脚本旨在使用原生脚本编写代码，减少对 jQuery 的依赖，借鉴了 http://youmightnotneedjquery.com/ ，只提供了常用的 dom 操作、查找元素等原生脚本没有提供或编写不方便的操作。
+                <br>
+                兼容的浏览器为：ie9+、chrome、firefox、safari。
+                <br>
+                <br>
+                与 jQuery 类似，所有的脚本函数都作为 Nemo 或 N 对象的内容，使用时采用 N.getFirstElement(ele) 这种方式调用。
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<script src="nemo.js">< /script>
+                        </script>
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- 说明 end -->
+
+        <!-- getFirstElement start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">getFirstElement</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">getFirstElement(selector / element)</h3>
+                    <p>获取匹配的元素组中的第一个元素</p>
+
+                    <dl class="md-param">
+                        <dt>selector</dt>
+                        <dd>
+                            <p>Type: Selector</p>
+                            <p>一段匹配元素的字符串，与 jQuery 的查找元素的字符串一致，比如 N.getFirstElement('.content h1')</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>element</dt>
+                        <dd>
+                            <p>Type: Element</p>
+                            <p>一个原生的 DOM 元素，比如 N.getFirstElement(document.querySelectorAll('.content h1'))</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<ul class="list">
+    <li>内容11</li>
+    <li>内容21</li>
+    <li>内容31</li>
+    <li>内容41</li>
+    <li>内容51</li>
+</ul>
+                        </script>
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-javascript">
+N.getFirstElement('.list > li');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- getFirstElement end -->
+
+        <!-- addClass start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">addClass</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">addClass(selector / element, className)</h3>
+                    <p>对匹配的元素组中的每个元素添加类名</p>
+
+                    <dl class="md-param">
+                        <dt>selector / element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>className</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>一段由空格隔开的字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+N.addClass('.list > li', 'hide');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- addClass end -->
+
+        <!-- removeClass start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">removeClass</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">removeClass(selector / element, className)</h3>
+                    <p>对匹配的元素组中的每个元素删除掉一个类名或多个类名</p>
+
+                    <dl class="md-param">
+                        <dt>selector / element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>className</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>一段由空格隔开的字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+N.removeClass('.list > li', 'hide');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- removeClass end -->
+
+        <!-- hasClass start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">hasClass</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">hasClass(selector / element, className)</h3>
+                    <p>判断匹配的元素组中任意一个元素是否有包含指定的类名</p>
+
+                    <dl class="md-param">
+                        <dt>selector / element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>className</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>一个用于判断的类名</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+N.hasClass('.list > li', 'hide');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- hasClass end -->
+
+        <!-- toggleClass start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">toggleClass</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">toggleClass(selector / element, className)</h3>
+                    <p>根据当前是否有包含指定的类名，对匹配的元素组中的每个元素添加或删除指定的一个或多个类名</p>
+
+                    <dl class="md-param">
+                        <dt>selector / element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>className</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>一段由空格隔开的字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+N.toggleClass('.list > li', 'hide');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- toggleClass end -->
+
+        <!-- before start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">before</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">before(selector / element, htmlString)</h3>
+                    <p>将字符串解析成HTML，并插入到匹配的元素前面</p>
+
+                    <dl class="md-param">
+                        <dt>selector / element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>htmlString</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>一段可以解析成HTML、XML的字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                执行前的结构：
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<div class="container">
+  <h2>Greetings</h2>
+  <div class="inner">Hello</div>
+  <div class="inner">Goodbye</div>
+</div>
+                        </script>
+                    </code>
+                </pre>
+                在每个 div.inner 前插入内容
+                <pre>
+                    <code class="language-javascript">
+N.before('.inner', '&lt;p>Test&lt;/p>');
+                    </code>
+                </pre>
+                执行后的效果：
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<div class="container">
+  <h2>Greetings</h2>
+  <p>Test</p>
+  <div class="inner">Hello</div>
+  <p>Test</p>
+  <div class="inner">Goodbye</div>
+</div>
+                        </script>
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- before end -->
+
+        <!-- after start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">after</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">after(selector / element, htmlString)</h3>
+                    <p>将字符串解析成HTML，并插入到匹配的元素后面</p>
+
+                    <dl class="md-param">
+                        <dt>selector / element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>htmlString</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>一段可以解析成HTML、XML的字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                执行前的结构：
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<div class="container">
+  <h2>Greetings</h2>
+  <div class="inner">Hello</div>
+  <div class="inner">Goodbye</div>
+</div>
+                        </script>
+                    </code>
+                </pre>
+                在每个 div.inner 前插入内容
+                <pre>
+                    <code class="language-javascript">
+N.after('.inner', '&lt;p>Test&lt;/p>');
+                    </code>
+                </pre>
+                执行后的效果：
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<div class="container">
+  <h2>Greetings</h2>
+  <div class="inner">Hello</div>
+  <p>Test</p>
+  <div class="inner">Goodbye</div>
+  <p>Test</p>
+</div>
+                        </script>
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- after end -->
+
+        <!-- contains start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">contains</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">contains(containerA, containerB)</h3>
+                    <p>判断 containerA 元素是否包含 containerB 元素</p>
+
+                    <dl class="md-param">
+                        <dt>containerA</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>containerB</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+N.contains('.container', '.inner');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- contains end -->
+
+        <!-- matches start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">matches</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">matches(element, selector)</h3>
+                    <p>判断 element 元素与 selector 所匹配的元素是否是同一个元素</p>
+
+                    <dl class="md-param">
+                        <dt>element</dt>
+                        <dd>
+                            <p>Type: Element</p>
+                            <p>一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>selector</dt>
+                        <dd>
+                            <p>Type: Selector</p>
+                            <p>一段匹配元素的字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<ul>
+  <li>list <strong>item 1</strong></li>
+  <li><span>list item 2</span></li>
+  <li>list item 3</li>
+</ul>
+                        </script>
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-javascript">
+document.querySelector('ul').addEventListener('click', function(event){
+    var target = event.target;
+    if (N.matches(target, 'li')) {
+        target.style.backgroundColor = 'red';
+    }
+});
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- matches end -->
+
+        <!-- offset start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">offset</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">offset(element)</h3>
+                    <p>获取匹配的元素组中第一个元素相对于文档的位置，包含 top、left 两个值</p>
+
+                    <dl class="md-param">
+                        <dt>element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+N.offset('.container');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- offset end -->
+
+        <!-- outerHeight start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">outerHeight</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">outerHeight(element, withMargin)</h3>
+                    <p>获取匹配的元素组中第一个元素的高度，包含 padding、border、margin（margin 只在 withMargin 为 true 时才包含）</p>
+
+                    <dl class="md-param">
+                        <dt>element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>withMargin</dt>
+                        <dd>
+                            <p>Type: Boolean</p>
+                            <p>用于指定获取的高度是否包含 margin</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+//不包含 margin
+N.outerHeight('.container');
+
+//包含 margin
+N.outerHeight('.container', true);
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- outerHeight end -->
+        
+        <!-- outerWidth start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">outerWidth</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">outerWidth(element, withMargin)</h3>
+                    <p>获取匹配的元素组中第一个元素的宽度，包含 padding、border、margin（margin 只在 withMargin 为 true 时才包含）</p>
+
+                    <dl class="md-param">
+                        <dt>element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>withMargin</dt>
+                        <dd>
+                            <p>Type: Boolean</p>
+                            <p>用于指定获取的宽度是否包含 margin</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+//不包含 margin
+N.outerWidth('.container');
+
+//包含 margin
+N.outerWidth('.container', true);
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- outerWidth end -->
+
+        <!-- siblings start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">siblings</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">siblings(element[,selector])</h3>
+                    <p>获取匹配的元素组中第一个元素的兄弟节点或指定的兄弟节点</p>
+
+                    <dl class="md-param">
+                        <dt>element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>selector</dt>
+                        <dd>
+                            <p>Type: Selector</p>
+                            <p>一段用于匹配兄弟节点的字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<ul>
+  <li>list item 1</li>
+  <li class="item">list item 2</li>
+  <li class="third-item">list item 3</li>
+  <li class="item">list item 4</li>
+  <li>list item 5</li>
+</ul>
+                        </script>
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-javascript">
+//返回所有兄弟节点
+N.siblings('li.third-item');
+
+//返回指定的兄弟节点
+N.siblings('li.third-item', '.item');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- siblings end -->
+
+        <!-- ready start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">ready</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">ready([documentElement,]handler)</h3>
+                    <p>在当前文档或指定文档中，当初始的 HTML 文档被完全加载和解析完成之后，执行 handler 函数，而无需等待样式表、图像和子框架的完成加载。</p>
+
+                    <dl class="md-param">
+                        <dt>documentElement</dt>
+                        <dd>
+                            <p>Type: Element</p>
+                            <p>指定的文档元素，比如 iframes[i].contentWindow.document</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>handler</dt>
+                        <dd>
+                            <p>Type: Function</p>
+                            <p>在 DOM 元素完全加载后执行的函数</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<div class="content-mod-iframe">
+    <iframe src="iframe-demo.html" frameborder="0"></iframe>
+</div>
+                        </script>
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-javascript">
+//监听当前文档
+N.ready(function(e){
+    console.log('加载完了');
+});
+
+//监听指定文档
+var iframes = document.querySelectorAll(".content-mod-iframe iframe");
+N.ready(iframes[i].contentWindow.document, function(e){
+    console.log('加载完了');
+});
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- ready end -->
+
+        <!-- trigger start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">trigger</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">trigger(element, eventType)</h3>
+                    <p>触发匹配元素组中第一个元素的指定事件</p>
+
+                    <dl class="md-param">
+                        <dt>selector / element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>eventType</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>一段表示 Javascript 事件类型的字符串，如 click</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+var btn = document.querySelector('.submit');
+btn.addEventListener('click', function(){
+    console.log('提交表单');
+});
+N.trigger(btn, 'click');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- trigger end -->
+
+        <!-- triggerCustom start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">triggerCustom</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">triggerCustom(element, customType, detail)</h3>
+                    <p>触发匹配元素组中第一个元素的自定义事件</p>
+
+                    <dl class="md-param">
+                        <dt>element</dt>
+                        <dd>
+                            <p>Type: Selector / Element</p>
+                            <p>一段匹配元素的字符串或一个原生的 DOM 元素</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>customType</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>用户自定义的事件类型</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>detail</dt>
+                        <dd>
+                            <p>Type: Object</p>
+                            <p>执行事件时，传递过去的数据对象，这个数据将作为 event.detail 的内容</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+var btn = document.querySelector('.submit');
+btn.addEventListener('custom-event', function(){
+    console.log('执行用户自定义的事件');
+});
+N.trigger(btn, 'custom-event');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- triggerCustom end -->
+
+        <!-- isFunction start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">isFunction</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">isFunction(object)</h3>
+                    <p>判断当前对象是不是一个函数</p>
+
+                    <dl class="md-param">
+                        <dt>object</dt>
+                        <dd>
+                            <p>Type: Object</p>
+                            <p>一个用于判断的对象</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+//返回 false
+var a = 6;
+N.isFunction(a);
+
+//返回 true
+var b = function(){
+    console.log('hello world');
+}
+N.isFunction(b);
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- isFunction end -->
+
+        <!-- extend start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">extend</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">extend([deep,]target,objectA[,objectB...])</h3>
+                    <p>描述</p>
+
+                    <dl class="md-param">
+                        <dt>deep</dt>
+                        <dd>
+                            <p>Type: Boolean</p>
+                            <p>是否要深度拷贝，默认是浅拷贝。当选择深度拷贝时，如果多个对象的同名属性也是对象时，则该“属性对象”的属性也会进行合并</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>target</dt>
+                        <dd>
+                            <p>Type: Object</p>
+                            <p>目标对象，后面对象的属性都合并到这个对象中</p>
+                        </dd>
+                    </dl>
+
+                    <dl class="md-param">
+                        <dt>objectA</dt>
+                        <dd>
+                            <p>Type: Object</p>
+                            <p>用于合并的对象，当前对象的属性值都会合并到目标对象中</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+var object1 = {
+  apple: 0,
+  banana: { weight: 52, price: 100 },
+  cherry: 97
+};
+var object2 = {
+  banana: { price: 200 },
+  durian: 100
+};
+
+//浅拷贝，object1 打印出来的内容是：{"apple":0,"banana":{"price":200},"cherry":97,"durian":100}
+N.extend( object1, object2 );
+
+//深度拷贝，object1 打印出来的内容是：{"apple":0,"banana":{"weight":52,"price":200},"cherry":97,"durian":100}
+N.extend( true, object1, object2 );
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- extend end -->
+
+        <!-- 组件名 start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">xxxxxxx3</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">标题</h3>
+                    <p>描述</p>
+
+                    <dl class="md-param">
+                        <dt>参数</dt>
+                        <dd>
+                            <p>Type: 参数</p>
+                            <p>描述</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+var a = 6;
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- 组件名 end -->
+
+        <!-- 组件名 start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">zzzzz</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+<h1 class="foo">h1. Heading 1</h1>
+<h2>h2. Heading 2</h2>
+<h3>h3. Heading 3</h3>
+<h4>h4. Heading 4</h4>
+<h5>h5. Heading 5</h5>
+<h6>h6. Heading 6</h6>
+                        </script>
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-css">
+p {margin: 1px}
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-javascript">
+var a = 6;
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-jsx">
+const ModuleA = import('test.js');
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- 组件名 end -->
+        
+    </main>
+</div>
+
+<script src="../base/base.js"></script>
+<script src="../_doc/js/common.js"></script>
+<!-- 代码高亮 start -->
+<script src="../_doc/prism/prism.js"></script>
+<!-- 代码高亮 end -->
+<script>
+    N.ready(function(){
+        createNav();
+        bindNavFunc();
+    });
+</script>
 </body>
 </html>
