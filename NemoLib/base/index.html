@@ -929,16 +929,49 @@ N.extend( true, object1, object2 );
         </div>
         <!-- extend end -->
 
-        <!-- 组件名 start -->
+        <!-- parseHTML start -->
         <div class="content-mod">
             <div class="content-mod-hd">
-                <h2 class="content-mod-tit">xxxxxxx3</h2>
+                <h2 class="content-mod-tit">parseHTML</h2>
             </div>
             <div class="content-mod-bd">
                 <!-- 参数说明 start -->
                 <div class="md-desc">
-                    <h3 class="md-desc-title">标题</h3>
-                    <p>描述</p>
+                    <h3 class="md-desc-title">parseHTML(htmlString)</h3>
+                    <p>将 HTML 字符串解析成 DOM 节点数组，并返回这个数组</p>
+
+                    <dl class="md-param">
+                        <dt>htmlString</dt>
+                        <dd>
+                            <p>Type: String</p>
+                            <p>用于解析的 HTML 字符串</p>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 参数说明 end -->
+
+                <!-- 在这里写入代码地址 start -->
+                <pre>
+                    <code class="language-javascript">
+var str = "Testing <b>Nemo parseHTML</b> function",
+    html = N.parseHTML(str);
+                    </code>
+                </pre>
+                <!-- 在这里写入代码地址 end -->
+            </div>
+        </div>
+        <!-- parseHTML end -->
+
+        <!-- parseHTML start -->
+        <div class="content-mod">
+            <div class="content-mod-hd">
+                <h2 class="content-mod-tit">parseHTML</h2>
+            </div>
+            <div class="content-mod-bd">
+                <!-- 参数说明 start -->
+                <div class="md-desc">
+                    <h3 class="md-desc-title">parseHTML(htmlString)</h3>
+                    <p>将一段字符串解析成 HTML 结构，并返回这个结构</p>
 
                     <dl class="md-param">
                         <dt>参数</dt>
@@ -959,7 +992,7 @@ var a = 6;
                 <!-- 在这里写入代码地址 end -->
             </div>
         </div>
-        <!-- 组件名 end -->
+        <!-- parseHTML end -->
 
         <!-- 组件名 start -->
         <div class="content-mod">
