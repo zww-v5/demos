@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .demo {
+            position: relative;
+            margin: 50px auto;
+            max-width: 1000px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -25px 0 0 -25px;
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+        }
+        .toolbar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            padding: 10px;
+            width: 100%;
+            border-top: 1px solid #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <p>position 0</p>
+        <div class="box"></div>
+    </div>
+
+    <div class="demo">
+        <p>position -=1</p>
+        <div class="box"></div>
+    </div>
+
+    <div class="demo">
+        <p>position 1</p>
+        <div class="box"></div>
+    </div>
+
+    <div class="demo">
+            <p>position +=1</p>
+            <div class="box"></div>
+        </div>
+
+    <div class="toolbar">
+        <button id="start">开始</button>
+    </div>
+    
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="./TweenMax.min.js"></script>
+    <script>
+        var box = document.querySelectorAll('.box');
+
+        document.getElementById('start').addEventListener('click', function(){
+            demo0();
+            demo1();
+            demo2();
+            demo3();
+        })
+
+        function demo0() {
+            var t = new TimelineMax(),
+                ele = box[0];
+                
+            t.from(ele, 1, {x: -600}).from(ele, 1, {y: 100});
+        }
+
+        function demo1() {
+            var t = new TimelineMax(),
+                ele = box[1];
+
+            t.from(ele, 1, {x: -600}).from(ele, 1, {y: 100}, '-=1');
+        }
+        
+        function demo2() {
+            var t = new TimelineMax(),
+                ele = box[2];
+
+            t.from(ele, 1, {x: -600}).from(ele, 1, {y: 100}, 1);
+        } 
+        
+        function demo3() {
+            var t = new TimelineMax(),
+                ele = box[3];
+
+            t.from(ele, 1, {x: -600}).from(ele, 1, {y: 100}, '+=1');
+        } 
+    </script>
+</body>
+</html>
