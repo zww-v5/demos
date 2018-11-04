@@ -81,23 +81,20 @@ function triggerView(){
 function adjustIframeHeight( iFrame ) {
     var wrap = iFrame.parentNode;
 
-    // iframe 加载完毕的监听还是有点问题，目前是通过 setTimeout 来规避，还有待完善的解决方案
-    setTimeout(function(){
-        try {
-            if (!wrap.style.height) {
-                wrap.style.height = iFrame.contentWindow.document.body.scrollHeight + 'px';   
-            }
-        } catch (error) {
-            console.log('adjust error', iFrame.src,error); 
+    try {
+        if (!wrap.style.height) {
+            wrap.style.height = iFrame.contentWindow.document.body.scrollHeight + 'px';   
         }
-    }, 200);
+    } catch (error) {
+        console.log('adjust error', iFrame.src,error); 
+    }
 }
 
 function adjustAllIframes() {
-    var iframes = iframes = document.querySelectorAll(".content-mod-iframe iframe");
+    var iframes = document.querySelectorAll(".content-mod-iframe iframe");
     
     for( var i = 0; i < iframes.length; i++) {
-        N.ready(iframes[i].contentWindow.document, function(e){
+        iframes[i].addEventListener('load', function(){
             adjustIframeHeight(iframes[i - 1]);
         });
     }
